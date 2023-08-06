@@ -1,9 +1,22 @@
 {
+  "name": "translate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "getChinese": "cd tools && node getChinese.js",
+    "checkChinese": "cd tools && node checkChinese.js",
+    "csvToYaml": "cd tools && node csvToYaml.js",
+    "yamlTocsv": "cd tools && node yamlTocsv.js",
+    "translate": "cd tools && node translate.js",
+    "newGetChinese": "cd tools && node newGetChinese.js"
+  },
   "dependencies": {
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "js-yaml": "^4.1.0",
-    "prettier": "^2.8.7"
+    "pinyin": "pinyin@3.0.0-alpha.5",
+    "prettier": "^2.8.7",
+    "puppeteer-core": "^21.0.1"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",

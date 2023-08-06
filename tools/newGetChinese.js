@@ -1,5 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const {pinyin} = require("pinyin");
+
+const outputDir = '../output';
+
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
 
 const detectedChinese = [];
 const excludeFilesAndDirs = [
@@ -23,9 +30,13 @@ function extractData(str, pattern, filepath, index) {
 
 function addToDetectedList(str, path, index) {
   if (containsChinese(str)) {
+    const preKey = path.match(/\/([^/]+)\./)[1];
+    const key = chineseToI18nKey(str);
     detectedChinese.push({
       filepath: `${path}:${index}`,
-      sentence: str.trim()
+      sentence: str.trim(),
+      preKey,
+      key
     });
   }
 }
@@ -82,19 +93,41 @@ function walkDir(dir) {
     }
   });
 }
+// 生成i18n key
+function chineseToI18nKey(chineseStr) {
+  // 如果中文字符串的长度超过4，只取前4个字符
+  if (chineseStr.length > 4) {
+    chineseStr = chineseStr.substring(0, 4);
+  }
+
+  const words = pinyin(chineseStr, {
+    style: pinyin.STYLE_NORMAL,
+    heteronym: false
+  }).flat();
+
+  return words.map((word, index) => {
+    if (index === 0) {
+      return word.toLowerCase();
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join('');
+}
 
 function writeResultsToCsv() {
   const BOM = "\uFEFF";
   const csvContent = [`${BOM}FilePath,preKey,key,zh,en`];
   detectedChinese.forEach(item => {
-    const preKey = item.filepath.match(/\/([^/]+)\./)[1];
-    const escapedSentence = item.sentence.replace(/"/g, '""');
-    csvContent.push(`"${item.filepath}",${preKey},"","${escapedSentence}",""`);
+    const {preKey,filepath,sentence,key} = item;
+    const escapedSentence = sentence.replace(/"/g, '""');
+    const escapedKey = key.replace(/"/g, '""');
+    csvContent.push(`"${filepath}","${preKey}","${escapedKey}","${escapedSentence}",""`);
   });
 
   try {
-    fs.writeFileSync("detected_chinese.csv", csvContent.join("\n"), "utf-8");
-    console.log("已将检测到的中文句子信息写入 detected_chinese.csv");
+    // 修改输出路径，确保它位于outputDir中
+    const outputPath = path.join(outputDir, "getChinese.csv");
+    fs.writeFileSync(outputPath, csvContent.join("\n"), "utf-8");
+    console.log("已将检测到的中文字符信息写入 getChinese.csv");
   } catch (e) {
     console.error("Failed to write to CSV:", e);
   }

@@ -1,5 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+// 输出目录名称
+const outputDir = '../output';
+
+// 检查目录是否存在，如果不存在则创建
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
 
 // 列出要排除的文件或文件夹名称
 const excludeFilesAndDirs = [
@@ -74,8 +81,10 @@ function writeResultsToCsv() {
   for (const info of chineseCharsInfo) {
     csvContent.push(`"${info.path}","${info.chinese}",${info.lineNumber}`);
   }
-  fs.writeFileSync("detected_chinese.csv", csvContent.join("\n"), "utf-8");
-  console.log("已将检测到的中文字符信息写入 detected_chinese.csv");
+  // 修改输出路径，确保它位于outputDir中
+  const outputPath = path.join(outputDir, "getChinese.csv");
+  fs.writeFileSync(outputPath, csvContent.join("\n"), "utf-8");
+  console.log("已将检测到的中文字符信息写入 getChinese.csv");
 }
 
 // 在项目src目录下运行
