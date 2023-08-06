@@ -1,12 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 const {pinyin} = require("pinyin");
+const CHINESE_PINYIN_LENGTH = 4;
 
 const outputDir = '../output';
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
+const detectedSentencesByDir = {};
+const detectedGlobalSentences = new Set();
 
 const detectedChinese = [];
 const excludeFilesAndDirs = [
@@ -30,16 +33,48 @@ function extractData(str, pattern, filepath, index) {
 
 function addToDetectedList(str, path, index) {
   if (containsChinese(str)) {
+    const sentence = str.trim();
+    // 对所有获取到的中文句子进行去重
+    if (detectedGlobalSentences.has(sentence)) {
+      return;  // 如果句子已经被全局检测到，则直接返回
+    }
+    detectedGlobalSentences.add(sentence);
+
+    //针对同一个目录中的中文进行去重
+    const dir = path.match(/(.*\/)[^/]+\./)[1];  // 获取文件的目录路径
     const preKey = path.match(/\/([^/]+)\./)[1];
-    const key = chineseToI18nKey(str);
+    let key = chineseToI18nKey(str);
+    // 初始化该目录的集合（如果还没有初始化）
+    if (!detectedSentencesByDir[dir]) {
+      detectedSentencesByDir[dir] = {
+        sentences: new Set(),
+        keys: new Set()
+      };
+    }
+    // 检查该句子是否已经在该目录中被检测到
+    if (detectedSentencesByDir[dir].sentences.has(sentence)) {
+      return;  // 如果已检测到，则直接返回
+    }
+    // Ensure unique key in the directory
+    let suffix = 1;  // Suffix to append to the key if it's not unique
+    while (detectedSentencesByDir[dir].keys.has(key)) {
+      key = chineseToI18nKey(str) + suffix;
+      suffix++;
+    }
+
+
+    // 将句子和键添加到对应的目录的集合中
+    detectedSentencesByDir[dir].sentences.add(sentence);
+    detectedSentencesByDir[dir].keys.add(key);
     detectedChinese.push({
       filepath: `${path}:${index}`,
-      sentence: str.trim(),
+      sentence,
       preKey,
       key
     });
   }
 }
+
 
 function processLine(line, filepath, index) {
   extractData(line, /"([^"]+)"/, filepath, index);
@@ -95,8 +130,10 @@ function walkDir(dir) {
 }
 // 生成i18n key
 function chineseToI18nKey(chineseStr) {
+  //去除非中文字符
+  chineseStr = chineseStr.replace(/[^\u4e00-\u9fa5]/gi, '');
   // 如果中文字符串的长度超过4，只取前4个字符
-  if (chineseStr.length > 4) {
+  if (chineseStr.length > CHINESE_PINYIN_LENGTH) {
     chineseStr = chineseStr.substring(0, 4);
   }
 
@@ -115,19 +152,18 @@ function chineseToI18nKey(chineseStr) {
 
 function writeResultsToCsv() {
   const BOM = "\uFEFF";
-  const csvContent = [`${BOM}FilePath,preKey,key,zh,en`];
+  const csvContent = [`comment,${BOM}FilePath,preId,id,zh-cn,en-us`];
   detectedChinese.forEach(item => {
     const {preKey,filepath,sentence,key} = item;
     const escapedSentence = sentence.replace(/"/g, '""');
-    const escapedKey = key.replace(/"/g, '""');
-    csvContent.push(`"${filepath}","${preKey}","${escapedKey}","${escapedSentence}",""`);
+    csvContent.push(`"","${filepath}","${preKey}","${key}","${escapedSentence}","en"`);
   });
 
   try {
     // 修改输出路径，确保它位于outputDir中
-    const outputPath = path.join(outputDir, "getChinese.csv");
+    const outputPath = path.join(outputDir, "translations.csv");
     fs.writeFileSync(outputPath, csvContent.join("\n"), "utf-8");
-    console.log("已将检测到的中文字符信息写入 getChinese.csv");
+    console.log("已将检测到的中文字符信息写入 translations.csv");
   } catch (e) {
     console.error("Failed to write to CSV:", e);
   }

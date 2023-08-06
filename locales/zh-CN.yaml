@@ -1,0 +1,104 @@
+addUpdate:
+  tianJiaZiDian: 添加字典
+  tianJiaCaiDan: 添加菜单
+  shangJiCaiDan: 上级菜单不能为空
+  caiDanLeiXing: 菜单类型不能为空
+  caiDanMingCheng: 菜单名称不能为空1
+  caiDanMingCheng1: 菜单名称不能为空2
+  caiDanMingCheng2: 菜单名称不能为空3
+  caiDanShunXu: 菜单顺序不能为空
+  yeMianLuJing: 页面路径或权限标识不能为空
+  yeMianMingCheng: 页面名称不能为空
+  zhuLeiMu: 主类目
+  xiuGaiChengGong: 修改成功！
+  xinZengChengGong: 新增成功
+  shangJiCaiDan1: 上级菜单
+  xuanZeShangJi: 选择上级菜单
+  caiDanLeiXing1: 菜单类型
+  caiDanTuBiao: 菜单图标
+  dianJiXuanZe: 点击选择图标
+  muLuMingCheng: 目录名称
+  caiDanMingCheng3: 菜单名称
+  anNiuMingCheng: 按钮名称
+  qingShuRuCai: 请输入菜单名称
+  xianShiPaiXu: 显示排序
+  qingShuRuQuan: 请输入权限标识
+  qingShuRuYe: 请输入页面路径
+  anNiuKongZhi: 按钮控制器中定义的权限字符，如：v-permission='system:role:add'
+  fangWenDeYe: 访问的页面路径，如：菜单管理 `/system/menu/index`，默认在`views`目录下
+  fangWenDeMu: 访问的目录路径，如：菜单管理 `/system`，默认在`views`目录下
+  muLuLuJing: 目录路径
+  yeMianLuJing1: 页面路径
+  quanXianBiaoShi: 权限标识
+  fangWenYeMian: 访问页面的名称，系统访问页面路由时，根据页面名称来定位
+  qingShuRuYe1: 请输入页面名称
+  ciAnNiuGong: 此按钮功能对应的后端接口请求地址，如：新增菜单接口：/boss/system/menu/add
+  jieKouQingQiu: 接口请求地址
+  beiZhu: 备注
+  qingShuRuCai1: 请输入菜单备注
+  xinZengRenYuan: 新增人员
+  tianJiaChengGong: 添加成功！
+  yongHuMing: 用户名
+  qingShuRuYong: 请输入用户名
+  miMa: 密码
+  qingShuRuMi: 请输入密码
+  queRenMiMa: 确认密码
+  qingQueRenMi: 请确认密码
+  shouJiHao: 手机号
+  qingShuRuShou: 请输入手机号
+  qingXuanZe: 请选择
+  zhuangTai: 状态
+  tianJiaJiaoSe: 添加角色
+  qingShuRuJiao: 请输入角色名
+  qingShuRuJiao1: 请输入角色描述
+  jiaoSeMing: 角色名
+  jiaoSeMiaoShu: 角色描述
+index:
+  duiZhaoZiDuan: 对照字段：
+  qingXuanZeZi: 请选择字典名称
+  renYuanMingCheng: 人员名称：
+  qingShuRuRen: 请输入人员名称
+  shouJiHaoMa: 手机号码：
+  qingShuRuShou1: 请输入手机号码
+  jiaoSeMing1: 角色名：
+  jiaoSeMiaoShu1: 角色描述：
+hook:
+  tuBiao: 图标
+  paiXu: 排序
+  yeMianLuJing2: 页面路径或权限标识
+  jieKouDiZhi: 接口地址
+  houDuanQingQiu: 后端请求路径
+  caoZuo: 操作
+  xiuGaiCaiDan: 修改菜单
+  shiFouQueRen: 是否确认删除名称为"
+  deShuJuXiang: '"的数据项?'
+  tiShi: 提示
+  quXiaoCaoZuo: 取消操作
+  shanChuChengGong: 删除成功
+  keYong: 可用
+  buKeYong: 不可用
+  xuHao: 序号
+  quHaoShouJi: 区号 - 手机号
+  chuangJianShiJian: 创建时间
+  zuiHouXiuGai: 最后修改时间
+  xiuGaiRenYuan: 修改人员
+  queRen: 确认
+  quXiao: 取消
+  bianJiJiaoSe: 编辑角色
+assignRoles:
+  caoZuoChengGong: 操作成功！
+  fenPeiJiaoSe: 分配角色
+  renYuanZhuangTai: 人员状态
+  renYuanJiaoSe: 人员角色
+validate:
+  zuiDuoGeZi: 最多30 个字符
+  changDuZaiDao: 长度在 6 到 18 个字符
+  qingZaiCiQue: 请再次确认密码
+  liangCiShuRu: 两次输入密码不一致!
+  qingShuRuZheng: 请输入正确格式的手机号
+  qingXuanZeZhuang: 请选择状态
+assignMenu:
+  jiaZaiZhong: 加载中...
+  zanWuShuJu: 暂无数据
+  jiaZaiShiBai: 加载失败
+  caiDan: 菜单

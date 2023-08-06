@@ -5,14 +5,18 @@ const yaml = require("js-yaml");
 // 常量定义
 const EN_FILE = "en.yaml";
 const ZH_FILE = "zh-CN.yaml";
-const CSV_FILE = "translations.csv";
-const LOCAL_DIR = ".";
+const CSV_FILE = "../outPut/translations.csv";
+const LOCAL_DIR = "../locales";
 
 let data = [];
 let totalRows = 0;
 let validRows = 0;
 const usedIds = [];
 const stream = fs.createReadStream(CSV_FILE);
+
+if (!fs.existsSync(LOCAL_DIR)) {
+  fs.mkdirSync(LOCAL_DIR);
+}
 
 stream
   .pipe(csv())
