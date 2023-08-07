@@ -18,35 +18,29 @@ const excludeFilesAndDirs = [
   "node_modules"
 ];
 const fileExtensions = [".js", ".ts", ".jsx", ".tsx", ".vue"];
-
-function containsChinese(str) {
-  return /[\u4e00-\u9fa5]/.test(str);
+const chineseRegex = /[\u4e00-\u9fa5]/;
+function containsChinese(s) {
+  return chineseRegex.test(s);
 }
 
 function addToDetectedList(str, path, index) {
   if (containsChinese(str)) {
     const sentence = str.trim();
 
-    // Check for overlap in the same file and line
     const filepath = path + ":" + index;
     let existingSentence = detectedLines[filepath];
     if (existingSentence && (sentence.indexOf(existingSentence) !== -1 || existingSentence.indexOf(sentence) !== -1)) {
       if (sentence.length <= existingSentence.length) {
-        return;  // If the new sentence is shorter or equal, we skip adding it
+        return;
       }
-      // If the new sentence is longer, we update the existing sentence
       detectedLines[filepath] = sentence;
     } else {
       detectedLines[filepath] = sentence;
     }
-
-    // Global sentences deduplication
     if (detectedGlobalSentences.has(sentence)) {
       return;
     }
     detectedGlobalSentences.add(sentence);
-
-    // Deduplication per directory
     const dir = path.match(/(.*\/)[^/]+\./)[1];
     const preKey = path.match(/\/([^/]+)\./)[1];
     let key = chineseToI18nKey(str);
@@ -79,7 +73,6 @@ function addToDetectedList(str, path, index) {
 
 function processLine(line, filepath, index) {
   if (containsChinese(line)) {
-    // Extract Chinese content
     const matches = extractChinese(line);
     matches.forEach(match => {
       addToDetectedList(match, filepath, index);
@@ -166,11 +159,8 @@ function walkDir(dir) {
     }
   });
 }
-// 生成i18n key
 function chineseToI18nKey(chineseStr) {
-  //去除非中文字符
   chineseStr = chineseStr.replace(/[^\u4e00-\u9fa5]/gi, '');
-  // 如果中文字符串的长度超过4，只取前4个字符
   if (chineseStr.length > CHINESE_PINYIN_LENGTH) {
     chineseStr = chineseStr.substring(0, 4);
   }
@@ -198,7 +188,6 @@ function writeResultsToCsv() {
   });
 
   try {
-    // 修改输出路径，确保它位于outputDir中
     const outputPath = path.join(outputDir, "translations.csv");
     fs.writeFileSync(outputPath, csvContent.join("\n"), "utf-8");
     console.log("已将检测到的中文字符信息写入 translations.csv");
