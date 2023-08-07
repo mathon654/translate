@@ -23,13 +23,16 @@ function containsChinese(str) {
   return /[\u4e00-\u9fa5]/.test(str);
 }
 
+//判断是否有引号
+function hasQuotationMarks(str) {
+  return /["']/g.test(str);
+}
 
-
-function extractData(str, pattern, filepath, index) {
+function extractData(str, pattern, filepath, index,select=false) {
   const regex = new RegExp(pattern, "g");
   let match;
   while ((match = regex.exec(str)) !== null) {
-    addToDetectedList(match[1], filepath, index);
+    addToDetectedList(select?match[0]:match[1], filepath, index);
   }
 }
 
@@ -80,11 +83,9 @@ function addToDetectedList(str, path, index) {
 
 
 function processLine(line, filepath, index) {
-  extractData(line, /"([^"]+)"/, filepath, index);
-  extractData(line, /'([^']+)'/, filepath, index);
-  if (!/["']/g.test(line)) {
-    extractData(line, /[\u4e00-\u9fa5]+/, filepath, index);
-  }
+    extractData(line, /"([^"]+)"/, filepath, index);
+    extractData(line, /'([^']+)'/, filepath, index);
+    extractData(line, /[\u4e00-\u9fa5\s]+/, filepath, index,true);
 }
 
 function processFileContent(content, filepath) {
@@ -160,7 +161,7 @@ function chineseToI18nKey(chineseStr) {
 
 function writeResultsToCsv() {
   const BOM = "\uFEFF";
-  const csvContent = [`comment,${BOM}FilePath,preId,id,zh-cn,en-us`];
+  const csvContent = [`${BOM}comment,FilePath,preId,id,zh-cn,en-us`];
   detectedChinese.forEach(item => {
     const {preKey,filepath,sentence,key,comment} = item;
     const escapedSentence = sentence.replace(/"/g, '""');

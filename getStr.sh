@@ -6,8 +6,12 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # 恢复默认颜色
 
-# 获取当前目录作为脚本的工作目录
-script_directory=$(pwd)
+# 获取当前脚本文件的绝对路径
+script_path="$(dirname "$(realpath "$0")")"
+
+# 切换到脚本文件所在的目录
+cd "$script_path"
+
 
 while true; do
     # 选择要检查文件所在的目录
@@ -30,11 +34,12 @@ while true; do
     src_folder_name=$(basename "$src_directory")
 
     # 输出每一步的过程
+
     echo -e "${YELLOW}清空 src 目录...${NC}"
     # 删除 src 目录及其内容
-    rm -rf "$script_directory/src"
+    rm -rf "$script_path/src"
     # 确保 src 目录已被删除
-    if [ -d "$script_directory/src" ]; then
+    if [ -d "$script_path/src" ]; then
         echo -e "${RED}无法删除 src 目录！${NC}"
         exit 1
     fi
@@ -42,11 +47,11 @@ while true; do
 
     echo -e "${YELLOW}复制选择的目录到脚本的目录下...${NC}"
     # 复制选择的目录到脚本的目录下，并重命名为 "src"
-    cp -r "$src_directory" "$script_directory/src"
+    cp -r "$src_directory" "$script_path/src"
     echo -e "${GREEN}复制完成！${NC}"
 
     # 切换到脚本所在目录
-    cd "$script_directory"
+    cd "$script_path"
 
     echo -e "${YELLOW}执行 yarn install...${NC}"
     # 执行 yarn install
@@ -60,6 +65,7 @@ while true; do
 
     # 打开脚本所在目录的文件夹下的 output 文件夹
     echo -e "${YELLOW}打开 output 文件夹...${NC}"
-    open output/translations.csv
+    #open output/translations.csv
+    open output/
     echo -e "${GREEN}脚本执行完成！${NC}"
 done
