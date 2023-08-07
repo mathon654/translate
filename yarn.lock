@@ -909,7 +909,7 @@ pend@~1.2.0:
   resolved "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
   integrity sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg==
 
-pinyin@^3.0.0:
+pinyin@pinyin@3.0.0-alpha.5:
   version "3.0.0-alpha.5"
   resolved "https://registry.npmjs.org/pinyin/-/pinyin-3.0.0-alpha.5.tgz#04e3aacc0bcfcf44e2baa4bf41fe91e9d8314c4b"
   integrity sha512-Sc8+Ch8uxZsVO0zvzHxvy24fEIixSl7V4kZoX4ThSyQ1BI0H8jIAqf0kxT8WMCX2xEHr1CYslKGDgSE4yj71hg==

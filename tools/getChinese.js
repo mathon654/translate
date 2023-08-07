@@ -1,70 +1,102 @@
 const fs = require("fs");
 const path = require("path");
+const {pinyin} = require("pinyin");
+const CHINESE_PINYIN_LENGTH = 4;
 
-const detectedChinese = []; // 用于保存检测到的中文句子信息
+const outputDir = '../output';
 
-// 列出要排除的文件或文件夹名称
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
+const detectedSentencesByDir = {};
+const detectedGlobalSentences = new Set();
+
+const detectedChinese = [];
 const excludeFilesAndDirs = [
   "countryList.ts",
   "countryList.js",
   "node_modules"
 ];
-
 const fileExtensions = [".js", ".ts", ".jsx", ".tsx", ".vue"];
 
-//判断是否有中文
 function containsChinese(str) {
   return /[\u4e00-\u9fa5]/.test(str);
 }
-//判断是否有引号
-function hasQuotationMarks(str) {
-  return /["']/g.test(str);
-}
-//取出正则表达式中的字符串
-function extractDataUsingRegex(str, regexPattern, path, index) {
-  const regex = new RegExp(regexPattern, "g");
-  let matches;
-  const results = [];
-  while ((matches = regex.exec(str)) !== null) {
-    pushData(matches[1], path, index);
-    results.push(matches[1]);
+
+
+
+function extractData(str, pattern, filepath, index) {
+  const regex = new RegExp(pattern, "g");
+  let match;
+  while ((match = regex.exec(str)) !== null) {
+    addToDetectedList(match[1], filepath, index);
   }
-  return results;
 }
 
-//判断是否为中文push到detectedChinese中
-function pushData(str, path, index) {
+function addToDetectedList(str, path, index) {
   if (containsChinese(str)) {
-    const filepath = `${path}:${index}`;
+    const sentence = str.trim();
+    // 对所有获取到的中文句子进行去重
+    if (detectedGlobalSentences.has(sentence)) {
+      return;  // 如果句子已经被全局检测到，则直接返回
+    }
+    detectedGlobalSentences.add(sentence);
+
+    //针对同一个目录中的中文进行去重
+    const dir = path.match(/(.*\/)[^/]+\./)[1];  // 获取文件的目录路径
+    const preKey = path.match(/\/([^/]+)\./)[1];
+    let key = chineseToI18nKey(str);
+    // 初始化该目录的集合（如果还没有初始化）
+    if (!detectedSentencesByDir[dir]) {
+      detectedSentencesByDir[dir] = {
+        sentences: new Set(),
+        keys: new Set()
+      };
+    }
+    // 检查该句子是否已经在该目录中被检测到
+    if (detectedSentencesByDir[dir].sentences.has(sentence)) {
+      return;  // 如果已检测到，则直接返回
+    }
+    // Ensure unique key in the directory
+    let suffix = 1;  // Suffix to append to the key if it's not unique
+    while (detectedSentencesByDir[dir].keys.has(key)) {
+      key = chineseToI18nKey(str) + suffix;
+      suffix++;
+    }
+
+    // 将句子和键添加到对应的目录的集合中
+    detectedSentencesByDir[dir].sentences.add(sentence);
+    detectedSentencesByDir[dir].keys.add(key);
+    const comment = `t('${preKey}.${key}')`;
     detectedChinese.push({
-      filepath: filepath, // 添加行号到文件路径
-      sentence: str.trim()
+      filepath: `${path}:${index}`,
+      sentence,
+      preKey,
+      key,
+      comment
     });
   }
 }
 
-// 删除注释并查找中文
+
+function processLine(line, filepath, index) {
+  extractData(line, /"([^"]+)"/, filepath, index);
+  extractData(line, /'([^']+)'/, filepath, index);
+  if (!/["']/g.test(line)) {
+    extractData(line, /[\u4e00-\u9fa5]+/, filepath, index);
+  }
+}
+
 function processFileContent(content, filepath) {
-  const codeWithoutComments = content.replace(
+
+  content = content.replace(
     /\/\/.*|\/\*[\s\S]*?\*\/|<!--[\s\S]*?-->/g,
     ""
-  );
-
-  // 分行处理
-  const lines = codeWithoutComments.split("\n");
+  ).replace(/console\.[\w]+\([^)]*\);?/g, '');
+  const lines = content.split("\n");
   lines.forEach((line, index) => {
-    //判断是否有中文
     if (containsChinese(line)) {
-      //判断是否有引号
-      if (hasQuotationMarks(line)) {
-        //取出双引号中的字符串
-        extractDataUsingRegex(line, /"([^"]+)"/, filepath, index);
-        //取出单引号中的字符串
-        extractDataUsingRegex(line, /'([^']+)'/, filepath, index);
-      } else {
-        //取出中文字符串
-        extractDataUsingRegex(line, /[\u4e00-\u9fa5\s]+/, filepath, index);
-      }
+      processLine(line, filepath, index);
     }
   });
 }
@@ -78,8 +110,8 @@ function walkDir(dir) {
     return;
   }
 
-  for (const file of files) {
-    if (excludeFilesAndDirs.includes(file)) continue;
+  files.forEach(file => {
+    if (excludeFilesAndDirs.includes(file)) return;
 
     const filepath = path.join(dir, file);
     let stats;
@@ -98,24 +130,48 @@ function walkDir(dir) {
         content = fs.readFileSync(filepath, "utf-8");
       } catch (e) {
         console.error(`Failed to read file ${filepath}:`, e);
-        continue;
+        return;
       }
       processFileContent(content, filepath);
     }
+  });
+}
+// 生成i18n key
+function chineseToI18nKey(chineseStr) {
+  //去除非中文字符
+  chineseStr = chineseStr.replace(/[^\u4e00-\u9fa5]/gi, '');
+  // 如果中文字符串的长度超过4，只取前4个字符
+  if (chineseStr.length > CHINESE_PINYIN_LENGTH) {
+    chineseStr = chineseStr.substring(0, 4);
   }
+
+  const words = pinyin(chineseStr, {
+    style: pinyin.STYLE_NORMAL,
+    heteronym: false
+  }).flat();
+
+  return words.map((word, index) => {
+    if (index === 0) {
+      return word.toLowerCase();
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join('');
 }
 
 function writeResultsToCsv() {
   const BOM = "\uFEFF";
-  const csvContent = [`${BOM}FilePath,ChineseSentence`];
+  const csvContent = [`comment,${BOM}FilePath,preId,id,zh-cn,en-us`];
   detectedChinese.forEach(item => {
-    const escapedSentence = item.sentence.replace(/"/g, '""');
-    csvContent.push(`"${item.filepath}","${escapedSentence}"`);
+    const {preKey,filepath,sentence,key,comment} = item;
+    const escapedSentence = sentence.replace(/"/g, '""');
+    csvContent.push(`"${comment}","${filepath}","${preKey}","${key}","${escapedSentence}","en"`);
   });
 
   try {
-    fs.writeFileSync("detected_chinese.csv", csvContent.join("\n"), "utf-8");
-    console.log("已将检测到的中文句子信息写入 detected_chinese.csv");
+    // 修改输出路径，确保它位于outputDir中
+    const outputPath = path.join(outputDir, "translations.csv");
+    fs.writeFileSync(outputPath, csvContent.join("\n"), "utf-8");
+    console.log("已将检测到的中文字符信息写入 translations.csv");
   } catch (e) {
     console.error("Failed to write to CSV:", e);
   }
