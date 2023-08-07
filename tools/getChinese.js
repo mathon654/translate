@@ -10,7 +10,7 @@ if (!fs.existsSync(outputDir)) {
 }
 const detectedSentencesByDir = {};
 const detectedGlobalSentences = new Set();
-
+let detectedLines = {};
 const detectedChinese = [];
 const excludeFilesAndDirs = [
   "countryList.ts",
@@ -23,56 +23,52 @@ function containsChinese(str) {
   return /[\u4e00-\u9fa5]/.test(str);
 }
 
-//判断是否有引号
-function hasQuotationMarks(str) {
-  return /["']/g.test(str);
-}
-
-function extractData(str, pattern, filepath, index,select=false) {
-  const regex = new RegExp(pattern, "g");
-  let match;
-  while ((match = regex.exec(str)) !== null) {
-    addToDetectedList(select?match[0]:match[1], filepath, index);
-  }
-}
-
 function addToDetectedList(str, path, index) {
   if (containsChinese(str)) {
     const sentence = str.trim();
-    // 对所有获取到的中文句子进行去重
+
+    // Check for overlap in the same file and line
+    const filepath = path + ":" + index;
+    let existingSentence = detectedLines[filepath];
+    if (existingSentence && (sentence.indexOf(existingSentence) !== -1 || existingSentence.indexOf(sentence) !== -1)) {
+      if (sentence.length <= existingSentence.length) {
+        return;  // If the new sentence is shorter or equal, we skip adding it
+      }
+      // If the new sentence is longer, we update the existing sentence
+      detectedLines[filepath] = sentence;
+    } else {
+      detectedLines[filepath] = sentence;
+    }
+
+    // Global sentences deduplication
     if (detectedGlobalSentences.has(sentence)) {
-      return;  // 如果句子已经被全局检测到，则直接返回
+      return;
     }
     detectedGlobalSentences.add(sentence);
 
-    //针对同一个目录中的中文进行去重
-    const dir = path.match(/(.*\/)[^/]+\./)[1];  // 获取文件的目录路径
+    // Deduplication per directory
+    const dir = path.match(/(.*\/)[^/]+\./)[1];
     const preKey = path.match(/\/([^/]+)\./)[1];
     let key = chineseToI18nKey(str);
-    // 初始化该目录的集合（如果还没有初始化）
     if (!detectedSentencesByDir[dir]) {
       detectedSentencesByDir[dir] = {
         sentences: new Set(),
         keys: new Set()
       };
     }
-    // 检查该句子是否已经在该目录中被检测到
     if (detectedSentencesByDir[dir].sentences.has(sentence)) {
-      return;  // 如果已检测到，则直接返回
+      return;
     }
-    // Ensure unique key in the directory
-    let suffix = 1;  // Suffix to append to the key if it's not unique
+    let suffix = 1;
     while (detectedSentencesByDir[dir].keys.has(key)) {
       key = chineseToI18nKey(str) + suffix;
       suffix++;
     }
-
-    // 将句子和键添加到对应的目录的集合中
     detectedSentencesByDir[dir].sentences.add(sentence);
     detectedSentencesByDir[dir].keys.add(key);
     const comment = `t('${preKey}.${key}')`;
     detectedChinese.push({
-      filepath: `${path}:${index}`,
+      filepath,
       sentence,
       preKey,
       key,
@@ -81,11 +77,44 @@ function addToDetectedList(str, path, index) {
   }
 }
 
-
 function processLine(line, filepath, index) {
-    extractData(line, /"([^"]+)"/, filepath, index);
-    extractData(line, /'([^']+)'/, filepath, index);
-    extractData(line, /[\u4e00-\u9fa5\s]+/, filepath, index,true);
+  if (containsChinese(line)) {
+    // Extract Chinese content
+    const matches = extractChinese(line);
+    matches.forEach(match => {
+      addToDetectedList(match, filepath, index);
+    });
+  }
+}
+
+function extractChinese(str) {
+  const results = [];
+  str=str.trim();
+  while (str) {
+    if (!containsChinese(str)) return results;
+
+    let match;
+    if ((match = str.match(/"([^"]*[\u4e00-\u9fa5]+[^"]*)"/))) {
+      results.push(match[1]);
+      str = str.replace(match[0], '');
+    } else if ((match = str.match(/<([^>]*[\u4e00-\u9fa5]+[^>]*)>/))) {
+      results.push(match[1]);
+      str = str.replace(match[0], '');
+    } else if ((match = str.match(/'([^']*[\u4e00-\u9fa5]+[^']*)'/))) {
+      results.push(match[1]);
+      str = str.replace(match[0], '');
+    } else {
+      // 获取不在引号和尖括号中的中文内容
+      match = str.match(/[\u4e00-\u9fa5][^]*[\u4e00-\u9fa5]/);
+      if (match) {
+        results.push(match[0]);
+        str = str.replace(match[0], '');
+      } else {
+        break;
+      }
+    }
+  }
+  return results;
 }
 
 function processFileContent(content, filepath) {
