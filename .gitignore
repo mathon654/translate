@@ -1,3 +1,6 @@
 .idea
 node_modules
-src
+/splitCsv/src
+/splitCsv/output
+/splitCsv_json/src
+/splitCsv_json/output
