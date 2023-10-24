@@ -1,104 +1,97 @@
-addUpdate:
-  tianJiaZiDian: 添加字典
-  tianJiaCaiDan: 添加菜单
-  shangJiCaiDan: 上级菜单不能为空
-  caiDanLeiXing: 菜单类型不能为空
-  caiDanMingCheng: 菜单名称不能为空1
-  caiDanMingCheng1: 菜单名称不能为空2
-  caiDanMingCheng2: 菜单名称不能为空3
-  caiDanShunXu: 菜单顺序不能为空
-  yeMianLuJing: 页面路径或权限标识不能为空
-  yeMianMingCheng: 页面名称不能为空
-  zhuLeiMu: 主类目
-  xiuGaiChengGong: 修改成功！
-  xinZengChengGong: 新增成功
-  shangJiCaiDan1: 上级菜单
-  xuanZeShangJi: 选择上级菜单
-  caiDanLeiXing1: 菜单类型
-  caiDanTuBiao: 菜单图标
-  dianJiXuanZe: 点击选择图标
-  muLuMingCheng: 目录名称
-  caiDanMingCheng3: 菜单名称
-  anNiuMingCheng: 按钮名称
-  qingShuRuCai: 请输入菜单名称
-  xianShiPaiXu: 显示排序
-  qingShuRuQuan: 请输入权限标识
-  qingShuRuYe: 请输入页面路径
-  anNiuKongZhi: 按钮控制器中定义的权限字符，如：v-permission='system:role:add'
-  fangWenDeYe: 访问的页面路径，如：菜单管理 `/system/menu/index`，默认在`views`目录下
-  fangWenDeMu: 访问的目录路径，如：菜单管理 `/system`，默认在`views`目录下
-  muLuLuJing: 目录路径
-  yeMianLuJing1: 页面路径
-  quanXianBiaoShi: 权限标识
-  fangWenYeMian: 访问页面的名称，系统访问页面路由时，根据页面名称来定位
-  qingShuRuYe1: 请输入页面名称
-  ciAnNiuGong: 此按钮功能对应的后端接口请求地址，如：新增菜单接口：/boss/system/menu/add
-  jieKouQingQiu: 接口请求地址
-  beiZhu: 备注
-  qingShuRuCai1: 请输入菜单备注
-  xinZengRenYuan: 新增人员
-  tianJiaChengGong: 添加成功！
-  yongHuMing: 用户名
-  qingShuRuYong: 请输入用户名
-  miMa: 密码
-  qingShuRuMi: 请输入密码
-  queRenMiMa: 确认密码
-  qingQueRenMi: 请确认密码
-  shouJiHao: 手机号
-  qingShuRuShou: 请输入手机号
-  qingXuanZe: 请选择
-  zhuangTai: 状态
-  tianJiaJiaoSe: 添加角色
-  qingShuRuJiao: 请输入角色名
-  qingShuRuJiao1: 请输入角色描述
-  jiaoSeMing: 角色名
-  jiaoSeMiaoShu: 角色描述
+language:
+  l: 中文
+response:
+  dengLuYiJing: 登录已经失效,请重新登录
 index:
-  duiZhaoZiDuan: 对照字段：
-  qingXuanZeZi: 请选择字典名称
-  renYuanMingCheng: 人员名称：
-  qingShuRuRen: 请输入人员名称
-  shouJiHaoMa: 手机号码：
-  qingShuRuShou1: 请输入手机号码
-  jiaoSeMing1: 角色名：
-  jiaoSeMiaoShu1: 角色描述：
-hook:
-  tuBiao: 图标
-  paiXu: 排序
-  yeMianLuJing2: 页面路径或权限标识
-  jieKouDiZhi: 接口地址
-  houDuanQingQiu: 后端请求路径
-  caoZuo: 操作
-  xiuGaiCaiDan: 修改菜单
-  shiFouQueRen: 是否确认删除名称为"
-  deShuJuXiang: '"的数据项?'
-  tiShi: 提示
-  quXiaoCaoZuo: 取消操作
-  shanChuChengGong: 删除成功
-  keYong: 可用
-  buKeYong: 不可用
-  xuHao: 序号
-  quHaoShouJi: 区号 - 手机号
-  chuangJianShiJian: 创建时间
-  zuiHouXiuGai: 最后修改时间
-  xiuGaiRenYuan: 修改人员
+  jinYongQingQiu: 禁用请求信息
+  shouYe: 首页
+  shiLi: 示例
+  duiHui: 兑汇
+  duiHuiJiLu: 兑汇记录
+  duiHuiXiangQing: 兑汇详情
   queRen: 确认
   quXiao: 取消
-  bianJiJiaoSe: 编辑角色
-assignRoles:
-  caoZuoChengGong: 操作成功！
-  fenPeiJiaoSe: 分配角色
-  renYuanZhuangTai: 人员状态
-  renYuanJiaoSe: 人员角色
-validate:
-  zuiDuoGeZi: 最多30 个字符
-  changDuZaiDao: 长度在 6 到 18 个字符
-  qingZaiCiQue: 请再次确认密码
-  liangCiShuRu: 两次输入密码不一致!
-  qingShuRuZheng: 请输入正确格式的手机号
-  qingXuanZeZhuang: 请选择状态
-assignMenu:
-  jiaZaiZhong: 加载中...
+  yuE: 余额
+  duiHuanJinE: 兑换金额不能为空
+  duiHuanJinE1: 兑换金额不能为0
+  duiHuanJinE2: 兑换金额不能小于最小兑换金额
+  duiHuanJinE3: 兑换金额不能大于单次最大限额
+  duiHuanJinE4: 兑换金额不能大于可用余额
+  huoQuZhangHu: 获取账户信息失败
+  jiaoYiDuiBu: 交易对不存在
+  cong: 从
+  zuiDa: 最大
+  keYongYuE: 可用余额
+  huiShuai: 汇率
+  zhi: 至
+AppConfirm:
+  zunJingDeKe: 尊敬的客户，本期理财投资尚未到期，撤销将不计本期收益，请确认是否执行撤销操作
+  cheXiao: 撤销
+  buCheXiao: 不撤销
+AppEmpty:
   zanWuShuJu: 暂无数据
-  jiaZaiShiBai: 加载失败
-  caiDan: 菜单
+InfoConfirm:
+  queRenBingFu: 确认并付款
+ResultPageDetail:
+  wanCheng: 完成
+SatelliteBgView:
+  zhiFuChengGong: 支付成功
+  qingGuanZhuDao: 请关注到账信息
+SelectCurrency:
+  biZhongXuanZe: 币种选择
+SelectCurrencyGeneral:
+  quanBuJiaoYi: 全部交易对
+  quanBuHuoBi: 全部货币
+SelectStatus:
+  buXian: 不限
+  weiZhiZhuangTai: 未知状态
+SelectTimePair:
+  queDing: 确定
+exchange:
+  huoQuXinXi: 获取KYC信息失败
+  shouQuanShiBai: 授权失败
+examples:
+  dingDanJinE: 订单金额
+  yeWuLeiXing: 业务类型
+  liCaiDingQi: 理财-定期理财
+  zhiFuFangShi: 支付方式
+  yuE: 余额USD
+  biaoTi: 标题1
+  fuBiaoTi: 副标题
+  biaoTi1: 标题2
+  biaoTi2: 标题3
+  biaoTi3: 标题4
+  xuanZeQi: 选择器
+  biZhong: 币种
+  dingDanQueRen: 订单确认
+  queRenDanKuang: 确认弹框
+Filter:
+  quanBu: 全部
+  shaiXuan: 筛选
+  jiaoYiDui: 交易对
+  shiJian: 时间
+  keJianSuoFan: 可检索范围：12个月
+  zhongZhi: 重置
+  xuanZeKaiShi: 选择开始时间
+  xuanZeJieShu: 选择结束时间
+record-info:
+  daiZhiFu: 待支付
+  yiQuXiao: 已取消
+  yiWanCheng: 已完成
+  yiTuiKuan: 已退款
+  huoQuXiangQing: 获取详情失败
+  duiHuiShiJian: 兑汇时间
+  duiChu: '`兑出${detailData.acceptSymbol}`'
+  duiRu: '`兑入${detailData.cashSymbol}`'
+  houQuXiao: 后取消
+  fuKuan: 付款
+  chaKanZhangDan: 查看账单详情
+record:
+  jiaoYiShiBai: 交易失败,已退款
+  jiaoYiShiBai1: 交易失败，已退款
+  zhaoBuDaoYong: 找不到用户ID
+  zhuangTai: 状态
+  shiJianShaiXuan: 时间筛选
+  duiChu1: 兑出
+result:
+  dingDanWanCheng: 订单完成

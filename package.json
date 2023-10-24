@@ -14,7 +14,7 @@
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "js-yaml": "^4.1.0",
-    "pinyin": "pinyin@3.0.0-alpha.5",
+    "pinyin": "^pinyin@3.0.0-alpha.5",
     "prettier": "^2.8.7",
     "puppeteer-core": "^21.0.1"
   },

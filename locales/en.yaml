@@ -1,104 +1,97 @@
-addUpdate:
-  tianJiaZiDian: en
-  tianJiaCaiDan: en
-  shangJiCaiDan: en
-  caiDanLeiXing: en
-  caiDanMingCheng: en
-  caiDanMingCheng1: en
-  caiDanMingCheng2: en
-  caiDanShunXu: en
-  yeMianLuJing: en
-  yeMianMingCheng: en
-  zhuLeiMu: en
-  xiuGaiChengGong: en
-  xinZengChengGong: en
-  shangJiCaiDan1: en
-  xuanZeShangJi: en
-  caiDanLeiXing1: en
-  caiDanTuBiao: en
-  dianJiXuanZe: en
-  muLuMingCheng: en
-  caiDanMingCheng3: en
-  anNiuMingCheng: en
-  qingShuRuCai: en
-  xianShiPaiXu: en
-  qingShuRuQuan: en
-  qingShuRuYe: en
-  anNiuKongZhi: en
-  fangWenDeYe: en
-  fangWenDeMu: en
-  muLuLuJing: en
-  yeMianLuJing1: en
-  quanXianBiaoShi: en
-  fangWenYeMian: en
-  qingShuRuYe1: en
-  ciAnNiuGong: en
-  jieKouQingQiu: en
-  beiZhu: en
-  qingShuRuCai1: en
-  xinZengRenYuan: en
-  tianJiaChengGong: en
-  yongHuMing: en
-  qingShuRuYong: en
-  miMa: en
-  qingShuRuMi: en
-  queRenMiMa: en
-  qingQueRenMi: en
-  shouJiHao: en
-  qingShuRuShou: en
-  qingXuanZe: en
-  zhuangTai: en
-  tianJiaJiaoSe: en
-  qingShuRuJiao: en
-  qingShuRuJiao1: en
-  jiaoSeMing: en
-  jiaoSeMiaoShu: en
+language:
+  l: 英文
+response:
+  dengLuYiJing: Login has expired, please login again
 index:
-  duiZhaoZiDuan: en
-  qingXuanZeZi: en
-  renYuanMingCheng: en
-  qingShuRuRen: en
-  shouJiHaoMa: en
-  qingShuRuShou1: en
-  jiaoSeMing1: en
-  jiaoSeMiaoShu1: en
-hook:
-  tuBiao: en
-  paiXu: en
-  yeMianLuJing2: en
-  jieKouDiZhi: en
-  houDuanQingQiu: en
-  caoZuo: en
-  xiuGaiCaiDan: en
-  shiFouQueRen: en
-  deShuJuXiang: en
-  tiShi: en
-  quXiaoCaoZuo: en
-  shanChuChengGong: en
-  keYong: en
-  buKeYong: en
-  xuHao: en
-  quHaoShouJi: en
-  chuangJianShiJian: en
-  zuiHouXiuGai: en
-  xiuGaiRenYuan: en
-  queRen: en
-  quXiao: en
-  bianJiJiaoSe: en
-assignRoles:
-  caoZuoChengGong: en
-  fenPeiJiaoSe: en
-  renYuanZhuangTai: en
-  renYuanJiaoSe: en
-validate:
-  zuiDuoGeZi: en
-  changDuZaiDao: en
-  qingZaiCiQue: en
-  liangCiShuRu: en
-  qingShuRuZheng: en
-  qingXuanZeZhuang: en
-assignMenu:
-  jiaZaiZhong: en
-  zanWuShuJu: en
-  jiaZaiShiBai: en
-  caiDan: en
+  jinYongQingQiu: Disable Request Message
+  shouYe: Home Page
+  shiLi: Examples
+  duiHui: Currency Exchange
+  duiHuiJiLu: Currency Exchange History
+  duiHuiXiangQing: Currency Exchange Details
+  queRen: Confirm
+  quXiao: Cancel
+  yuE: Balance
+  duiHuanJinE: The exchange amount cannot be empty
+  duiHuanJinE1: The exchange amount cannot be 0
+  duiHuanJinE2: The exchange amount cannot be less than the minimum exchange amount
+  duiHuanJinE3: The exchange amount cannot be greater than the maximum limit for a single transaction
+  duiHuanJinE4: The exchange amount cannot be greater than the available balance
+  huoQuZhangHu: Failed to obtain account information
+  jiaoYiDuiBu: Transaction pair does not exist
+  cong: From
+  zuiDa: Maximum
+  keYongYuE: Available balance
+  huiShuai: Exchange rate
+  zhi: To
+AppConfirm:
+  zunJingDeKe: Dear customer, the current financial investment has not yet matured. Cancellation will not count towards the current period's income. Please confirm whether to proceed with the cancellation operation
+  cheXiao: Withdrawal
+  buCheXiao: Unwithdrawn
+AppEmpty:
+  zanWuShuJu: There is currently no data available
+InfoConfirm:
+  queRenBingFu: Confirm and Payment
+ResultPageDetail:
+  wanCheng: Finished
+SatelliteBgView:
+  zhiFuChengGong: 'Payment successful '
+  qingGuanZhuDao: Please pay attention to the receipt information
+SelectCurrency:
+  biZhongXuanZe: Currency Selection
+SelectCurrencyGeneral:
+  quanBuJiaoYi: All Transaction Pairs
+  quanBuHuoBi: All Currencies
+SelectStatus:
+  buXian: Unlimited
+  weiZhiZhuangTai: Unknown Status
+SelectTimePair:
+  queDing: OK
+exchange:
+  huoQuXinXi: Failed to get KYC information
+  shouQuanShiBai: Authorization Failure
+examples:
+  dingDanJinE: Order Amount
+  yeWuLeiXing: Business Type
+  liCaiDingQi: Wealth Management-Fixed-term Wealth Management
+  zhiFuFangShi: Payment Method
+  yuE: Balance USD
+  biaoTi: Title 1
+  fuBiaoTi: Subtitle
+  biaoTi1: Title 2
+  biaoTi2: Title 3
+  biaoTi3: Title 4
+  xuanZeQi: Selector
+  biZhong: currency type
+  dingDanQueRen: Order Confirmation
+  queRenDanKuang: Confirmation Popup
+Filter:
+  quanBu: All
+  shaiXuan: Filter
+  jiaoYiDui: TransactionPairs
+  shiJian: Time
+  keJianSuoFan: 'Searchable range: 12 months'
+  zhongZhi: Reset
+  xuanZeKaiShi: Select start time
+  xuanZeJieShu: Select end time
+record-info:
+  daiZhiFu: To be paid
+  yiQuXiao: Cancelled
+  yiWanCheng: Completed
+  yiTuiKuan: 'Refunded '
+  huoQuXiangQing: Failed to obtain details
+  duiHuiShiJian: Exchange exchange time
+  duiChu: '`Cash out ${detailData. acceptSymbol}`'
+  duiRu: '`Cash in ${detailData. cashSymbol}`'
+  houQuXiao: post-cancellation
+  fuKuan: payment
+  chaKanZhangDan: View billing details
+record:
+  jiaoYiShiBai: Transaction failed, refunded
+  jiaoYiShiBai1: Transaction failed, refunded
+  zhaoBuDaoYong: User ID not found
+  zhuangTai: Status
+  shiJianShaiXuan: Time filtering
+  duiChu1: Cash out
+result:
+  dingDanWanCheng: Order completion

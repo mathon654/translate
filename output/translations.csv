@@ -1,210 +1,80 @@
-﻿comment,FilePath,preId,id,zh-cn,en-us
-"t('index.qingShuRuTu')","../src/components/IconSelect/index.vue:6","index","qingShuRuTu","请输入图标名称","en"
-"t('bar.kuanSong')","../src/components/ReTableBar/src/bar.tsx:72","bar","kuanSong","宽松","en"
-"t('bar.moRen')","../src/components/ReTableBar/src/bar.tsx:78","bar","moRen","默认","en"
-"t('bar.jinCou')","../src/components/ReTableBar/src/bar.tsx:84","bar","jinCou","紧凑","en"
-"t('bar.zheDie')","../src/components/ReTableBar/src/bar.tsx:104","bar","zheDie","折叠","en"
-"t('bar.zhanKai')","../src/components/ReTableBar/src/bar.tsx:104","bar","zhanKai","展开","en"
-"t('bar.shuaXin')","../src/components/ReTableBar/src/bar.tsx:118","bar","shuaXin","刷新","en"
-"t('bar.miDu')","../src/components/ReTableBar/src/bar.tsx:130","bar","miDu","密度","en"
-"t('index.qingZaiWenJian')","../src/config/index.ts:47","index","qingZaiWenJian","请在public文件夹下添加serverConfig.json配置文件","en"
-"t('appMain.huiDaoDingBu')","../src/layout/components/appMain.vue:83","appMain","huiDaoDingBu","回到顶部","en"
-"t('horizontal.jianTiZhongWen')","../src/layout/components/sidebar/horizontal.vue:81","horizontal","jianTiZhongWen","简体中文","en"
-"t('useNav.dangQianLuYou')","../src/layout/hooks/useNav.ts:15","useNav","dangQianLuYou","当前路由配置不正确，请检查配置","en"
-"t('index.shenFenYanZheng')","../src/utils/http/index.ts:99","index","shenFenYanZheng","身份验证失败，请重新登录！","en"
-"t('403.baoQianNiWu')","../src/views/error/403.vue:44","403","baoQianNiWu","抱歉，你无权访问该页面","en"
-"t('403.fanHuiShouYe')","../src/views/error/403.vue:62","403","fanHuiShouYe","返回首页","en"
-"t('404.baoQianNiFang')","../src/views/error/404.vue:44","404","baoQianNiFang","抱歉，你访问的页面不存在","en"
-"t('500.baoQianFuWu')","../src/views/error/500.vue:44","500","baoQianFuWu","抱歉，服务器出错了","en"
-"t('index.dengLuChengGong')","../src/views/login/index.vue:62","index","dengLuChengGong","登录成功","en"
-"t('rule.qingShuRuZhang')","../src/views/login/utils/rule.ts:8","rule","qingShuRuZhang","请输入账号","en"
-"t('rule.qingShuRuMi')","../src/views/login/utils/rule.ts:15","rule","qingShuRuMi","请输入密码","en"
-"t('addUpdate.tianJiaZiDian')","../src/views/system/dict/addUpdate.vue:11","addUpdate","tianJiaZiDian","添加字典","en"
-"t('addUpdate.qingShuRuDui')","../src/views/system/dict/addUpdate.vue:37","addUpdate","qingShuRuDui","请输入对照字段","en"
-"t('addUpdate.qingShuRuDui1')","../src/views/system/dict/addUpdate.vue:38","addUpdate","qingShuRuDui1","请输入对照名称","en"
-"t('addUpdate.qingShuRuDui2')","../src/views/system/dict/addUpdate.vue:39","addUpdate","qingShuRuDui2","请输入对照码","en"
-"t('addUpdate.qingShuRuDai')","../src/views/system/dict/addUpdate.vue:40","addUpdate","qingShuRuDai","请输入代码描述","en"
-"t('addUpdate.qingXuanZeShi')","../src/views/system/dict/addUpdate.vue:41","addUpdate","qingXuanZeShi","请选择是否可编辑","en"
-"t('addUpdate.xiuGaiChengGong')","../src/views/system/dict/addUpdate.vue:80","addUpdate","xiuGaiChengGong","修改成功！","en"
-"t('addUpdate.tianJiaChengGong')","../src/views/system/dict/addUpdate.vue:93","addUpdate","tianJiaChengGong","添加成功！","en"
-"t('addUpdate.duiZhaoZiDuan')","../src/views/system/dict/addUpdate.vue:122","addUpdate","duiZhaoZiDuan","对照字段","en"
-"t('addUpdate.duiZhaoMingCheng')","../src/views/system/dict/addUpdate.vue:129","addUpdate","duiZhaoMingCheng","对照名称","en"
-"t('addUpdate.duiZhaoMa')","../src/views/system/dict/addUpdate.vue:136","addUpdate","duiZhaoMa","对照码","en"
-"t('addUpdate.daiMaMiaoShu')","../src/views/system/dict/addUpdate.vue:143","addUpdate","daiMaMiaoShu","代码描述","en"
-"t('addUpdate.paiXuHao')","../src/views/system/dict/addUpdate.vue:150","addUpdate","paiXuHao","排序号","en"
-"t('addUpdate.qingShuRuPai')","../src/views/system/dict/addUpdate.vue:154","addUpdate","qingShuRuPai","请输入排序号","en"
-"t('addUpdate.bianJiMoShi')","../src/views/system/dict/addUpdate.vue:158","addUpdate","bianJiMoShi","编辑模式","en"
-"t('addUpdate.keBianJi')","../src/views/system/dict/addUpdate.vue:160","addUpdate","keBianJi","可编辑","en"
-"t('addUpdate.zhiDu')","../src/views/system/dict/addUpdate.vue:161","addUpdate","zhiDu","只读","en"
-"t('addUpdate.qiYongZhuangTai')","../src/views/system/dict/addUpdate.vue:164","addUpdate","qiYongZhuangTai","启用状态","en"
-"t('addUpdate.qiYong')","../src/views/system/dict/addUpdate.vue:166","addUpdate","qiYong","启用","en"
-"t('addUpdate.jinYong')","../src/views/system/dict/addUpdate.vue:167","addUpdate","jinYong","禁用","en"
-"t('addUpdate.beiZhu')","../src/views/system/dict/addUpdate.vue:170","addUpdate","beiZhu","备注","en"
-"t('addUpdate.beiZhuXinXi')","../src/views/system/dict/addUpdate.vue:172","addUpdate","beiZhuXinXi","备注信息","en"
-"t('addUpdate.quXiao')","../src/views/system/dict/addUpdate.vue:181","addUpdate","quXiao","取消","en"
-"t('addUpdate.baoCun')","../src/views/system/dict/addUpdate.vue:183","addUpdate","baoCun","保存","en"
-"t('index.duiZhaoZiDuan1')","../src/views/system/dict/index.vue:39","index","duiZhaoZiDuan1","对照字段：","en"
-"t('index.qingXuanZeZi')","../src/views/system/dict/index.vue:40","index","qingXuanZeZi","请选择字典名称","en"
-"t('index.souSuo')","../src/views/system/dict/index.vue:56","index","souSuo","搜索","en"
-"t('index.zhongZhi')","../src/views/system/dict/index.vue:59","index","zhongZhi","重置","en"
-"t('index.xinZengZiDian')","../src/views/system/dict/index.vue:67","index","xinZengZiDian","新增字典","en"
-"t('index.xiuGai')","../src/views/system/dict/index.vue:99","index","xiuGai","修改","en"
-"t('index.shanChu')","../src/views/system/dict/index.vue:109","index","shanChu","删除","en"
-"t('indexHook.ziDianBianHao')","../src/views/system/dict/indexHook.tsx:33","indexHook","ziDianBianHao","字典编号","en"
-"t('indexHook.fenLeiDaiMa')","../src/views/system/dict/indexHook.tsx:38","indexHook","fenLeiDaiMa","分类代码","en"
-"t('indexHook.fenLeiMingCheng')","../src/views/system/dict/indexHook.tsx:43","indexHook","fenLeiMingCheng","分类名称","en"
-"t('indexHook.ziDianDaiMa')","../src/views/system/dict/indexHook.tsx:48","indexHook","ziDianDaiMa","字典代码","en"
-"t('indexHook.ziDianMiaoShu')","../src/views/system/dict/indexHook.tsx:53","indexHook","ziDianMiaoShu","字典描述","en"
-"t('indexHook.paiXu')","../src/views/system/dict/indexHook.tsx:74","indexHook","paiXu","排序","en"
-"t('indexHook.chuangJianShiJian')","../src/views/system/dict/indexHook.tsx:84","indexHook","chuangJianShiJian","创建时间","en"
-"t('indexHook.gengXinShiJian')","../src/views/system/dict/indexHook.tsx:91","indexHook","gengXinShiJian","更新时间","en"
-"t('indexHook.caoZuo')","../src/views/system/dict/indexHook.tsx:98","indexHook","caoZuo","操作","en"
-"t('indexHook.bianJiZiDian')","../src/views/system/dict/indexHook.tsx:118","indexHook","bianJiZiDian","编辑字典","en"
-"t('indexHook.queRenShanChu')","../src/views/system/dict/indexHook.tsx:123","indexHook","queRenShanChu","确认删除该数据","en"
-"t('indexHook.tiShi')","../src/views/system/dict/indexHook.tsx:124","indexHook","tiShi","提示","en"
-"t('indexHook.queRen')","../src/views/system/dict/indexHook.tsx:125","indexHook","queRen","确认","en"
-"t('indexHook.quXiaoCaoZuo')","../src/views/system/dict/indexHook.tsx:133","indexHook","quXiaoCaoZuo","取消操作","en"
-"t('indexHook.shanChuChengGong')","../src/views/system/dict/indexHook.tsx:143","indexHook","shanChuChengGong","删除成功","en"
-"t('addUpdate.tianJiaCaiDan')","../src/views/system/menu/addUpdate.vue:42","addUpdate","tianJiaCaiDan","添加菜单","en"
-"t('addUpdate.shangJiCaiDan')","../src/views/system/menu/addUpdate.vue:79","addUpdate","shangJiCaiDan","上级菜单不能为空","en"
-"t('addUpdate.caiDanLeiXing')","../src/views/system/menu/addUpdate.vue:80","addUpdate","caiDanLeiXing","菜单类型不能为空","en"
-"t('addUpdate.caiDanMingCheng')","../src/views/system/menu/addUpdate.vue:81","addUpdate","caiDanMingCheng","菜单名称不能为空","en"
-"t('addUpdate.caiDanShunXu')","../src/views/system/menu/addUpdate.vue:82","addUpdate","caiDanShunXu","菜单顺序不能为空","en"
-"t('addUpdate.yeMianLuJing')","../src/views/system/menu/addUpdate.vue:84","addUpdate","yeMianLuJing","页面路径或权限标识不能为空","en"
-"t('addUpdate.yeMianMingCheng')","../src/views/system/menu/addUpdate.vue:87","addUpdate","yeMianMingCheng","页面名称不能为空","en"
-"t('addUpdate.zhuLeiMu')","../src/views/system/menu/addUpdate.vue:104","addUpdate","zhuLeiMu","主类目","en"
-"t('addUpdate.xiuGaiChengGong')","../src/views/system/menu/addUpdate.vue:167","addUpdate","xiuGaiChengGong","修改成功","en"
-"t('addUpdate.xinZengChengGong')","../src/views/system/menu/addUpdate.vue:181","addUpdate","xinZengChengGong","新增成功","en"
-"t('addUpdate.shangJiCaiDan1')","../src/views/system/menu/addUpdate.vue:207","addUpdate","shangJiCaiDan1","上级菜单","en"
-"t('addUpdate.xuanZeShangJi')","../src/views/system/menu/addUpdate.vue:218","addUpdate","xuanZeShangJi","选择上级菜单","en"
-"t('addUpdate.caiDanLeiXing1')","../src/views/system/menu/addUpdate.vue:224","addUpdate","caiDanLeiXing1","菜单类型","en"
-"t('addUpdate.muLu')","../src/views/system/menu/addUpdate.vue:226","addUpdate","muLu","目录","en"
-"t('addUpdate.caiDan')","../src/views/system/menu/addUpdate.vue:227","addUpdate","caiDan","菜单","en"
-"t('addUpdate.anNiu')","../src/views/system/menu/addUpdate.vue:228","addUpdate","anNiu","按钮","en"
-"t('addUpdate.caiDanTuBiao')","../src/views/system/menu/addUpdate.vue:233","addUpdate","caiDanTuBiao","菜单图标","en"
-"t('addUpdate.dianJiXuanZe')","../src/views/system/menu/addUpdate.vue:244","addUpdate","dianJiXuanZe","点击选择图标","en"
-"t('addUpdate.muLuMingCheng')","../src/views/system/menu/addUpdate.vue:273","addUpdate","muLuMingCheng","目录名称","en"
-"t('addUpdate.caiDanMingCheng1')","../src/views/system/menu/addUpdate.vue:275","addUpdate","caiDanMingCheng1","菜单名称","en"
-"t('addUpdate.anNiuMingCheng')","../src/views/system/menu/addUpdate.vue:276","addUpdate","anNiuMingCheng","按钮名称","en"
-"t('addUpdate.qingShuRuCai')","../src/views/system/menu/addUpdate.vue:280","addUpdate","qingShuRuCai","请输入菜单名称","en"
-"t('addUpdate.xianShiPaiXu')","../src/views/system/menu/addUpdate.vue:284","addUpdate","xianShiPaiXu","显示排序","en"
-"t('addUpdate.qingShuRuQuan')","../src/views/system/menu/addUpdate.vue:297","addUpdate","qingShuRuQuan","请输入权限标识","en"
-"t('addUpdate.qingShuRuYe')","../src/views/system/menu/addUpdate.vue:297","addUpdate","qingShuRuYe","请输入页面路径","en"
-"t('addUpdate.anNiuKongZhi')","../src/views/system/menu/addUpdate.vue:304","addUpdate","anNiuKongZhi","按钮控制器中定义的权限字符，如：v-permission='system:role:add'","en"
-"t('addUpdate.fangWenDeYe')","../src/views/system/menu/addUpdate.vue:311","addUpdate","fangWenDeYe","访问的页面路径，如：菜单管理 `/system/menu/index`，默认在`views`目录下","en"
-"t('addUpdate.fangWenDeMu')","../src/views/system/menu/addUpdate.vue:318","addUpdate","fangWenDeMu","访问的目录路径，如：菜单管理 `/system`，默认在`views`目录下","en"
-"t('addUpdate.muLuLuJing')","../src/views/system/menu/addUpdate.vue:326","addUpdate","muLuLuJing","目录路径","en"
-"t('addUpdate.yeMianLuJing1')","../src/views/system/menu/addUpdate.vue:328","addUpdate","yeMianLuJing1","页面路径","en"
-"t('addUpdate.quanXianBiaoShi')","../src/views/system/menu/addUpdate.vue:329","addUpdate","quanXianBiaoShi","权限标识","en"
-"t('addUpdate.fangWenYeMian')","../src/views/system/menu/addUpdate.vue:340","addUpdate","fangWenYeMian","访问页面的名称，系统访问页面路由时，根据页面名称来定位","en"
-"t('addUpdate.yeMianMingCheng1')","../src/views/system/menu/addUpdate.vue:345","addUpdate","yeMianMingCheng1","页面名称","en"
-"t('addUpdate.qingShuRuYe1')","../src/views/system/menu/addUpdate.vue:350","addUpdate","qingShuRuYe1","请输入页面名称","en"
-"t('addUpdate.ciAnNiuGong')","../src/views/system/menu/addUpdate.vue:359","addUpdate","ciAnNiuGong","此按钮功能对应的后端接口请求地址，如：新增菜单接口：/boss/system/menu/add","en"
-"t('addUpdate.jieKouDiZhi')","../src/views/system/menu/addUpdate.vue:364","addUpdate","jieKouDiZhi","接口地址","en"
-"t('addUpdate.jieKouQingQiu')","../src/views/system/menu/addUpdate.vue:367","addUpdate","jieKouQingQiu","接口请求地址","en"
-"t('addUpdate.qingShuRuCai1')","../src/views/system/menu/addUpdate.vue:376","addUpdate","qingShuRuCai1","请输入菜单备注","en"
-"t('addUpdate.queDing')","../src/views/system/menu/addUpdate.vue:385","addUpdate","queDing","确 定","en"
-"t('addUpdate.quXiao')","../src/views/system/menu/addUpdate.vue:387","addUpdate","quXiao","取 消","en"
-"t('hook.tuBiao')","../src/views/system/menu/hook.ts:41","hook","tuBiao","图标","en"
-"t('hook.yeMianLuJing2')","../src/views/system/menu/hook.ts:57","hook","yeMianLuJing2","页面路径或权限标识","en"
-"t('hook.xiuGaiCaiDan')","../src/views/system/menu/hook.ts:147","hook","xiuGaiCaiDan","修改菜单","en"
-"t('hook.shiFouQueRen')","../src/views/system/menu/hook.ts:152","hook","shiFouQueRen","是否确认删除名称为""","en"
-"t('hook.deShuJuXiang')","../src/views/system/menu/hook.ts:152","hook","deShuJuXiang","""的数据项?","en"
-"t('index.xinZengCaiDan')","../src/views/system/menu/index.vue:39","index","xinZengCaiDan","新增菜单","en"
-"t('index.zhanKaiZheDie')","../src/views/system/menu/index.vue:46","index","zhanKaiZheDie","展开/折叠","en"
-"t('index.xinZeng')","../src/views/system/menu/index.vue:79","index","xinZeng","新增","en"
-"t('addUpdate.xinZengRenYuan')","../src/views/system/personnel/addUpdate.vue:18","addUpdate","xinZengRenYuan","新增人员","en"
-"t('addUpdate.yongHuMing')","../src/views/system/personnel/addUpdate.vue:131","addUpdate","yongHuMing","用户名","en"
-"t('addUpdate.qingShuRuYong')","../src/views/system/personnel/addUpdate.vue:135","addUpdate","qingShuRuYong","请输入用户名","en"
-"t('addUpdate.miMa')","../src/views/system/personnel/addUpdate.vue:141","addUpdate","miMa","密码","en"
-"t('addUpdate.queRenMiMa')","../src/views/system/personnel/addUpdate.vue:153","addUpdate","queRenMiMa","确认密码","en"
-"t('addUpdate.qingQueRenMi')","../src/views/system/personnel/addUpdate.vue:159","addUpdate","qingQueRenMi","请确认密码","en"
-"t('addUpdate.shouJiHao')","../src/views/system/personnel/addUpdate.vue:164","addUpdate","shouJiHao","手机号","en"
-"t('addUpdate.qingShuRuShou')","../src/views/system/personnel/addUpdate.vue:167","addUpdate","qingShuRuShou","请输入手机号","en"
-"t('addUpdate.qingXuanZe')","../src/views/system/personnel/addUpdate.vue:176","addUpdate","qingXuanZe","请选择","en"
-"t('addUpdate.zhuangTai')","../src/views/system/personnel/addUpdate.vue:195","addUpdate","zhuangTai","状态","en"
-"t('addUpdate.keYong')","../src/views/system/personnel/addUpdate.vue:196","addUpdate","keYong","可用","en"
-"t('addUpdate.buKeYong')","../src/views/system/personnel/addUpdate.vue:197","addUpdate","buKeYong","不可用","en"
-"t('assignRoles.caoZuoChengGong')","../src/views/system/personnel/assignRoles.vue:75","assignRoles","caoZuoChengGong","操作成功！","en"
-"t('assignRoles.fenPeiJiaoSe')","../src/views/system/personnel/assignRoles.vue:90","assignRoles","fenPeiJiaoSe","分配角色","en"
-"t('assignRoles.renYuanZhuangTai')","../src/views/system/personnel/assignRoles.vue:99","assignRoles","renYuanZhuangTai","人员状态","en"
-"t('assignRoles.renYuanJiaoSe')","../src/views/system/personnel/assignRoles.vue:103","assignRoles","renYuanJiaoSe","人员角色","en"
-"t('hook.xuHao')","../src/views/system/personnel/hook.tsx:34","hook","xuHao","序号","en"
-"t('hook.quHaoShouJi')","../src/views/system/personnel/hook.tsx:49","hook","quHaoShouJi","区号 - 手机号","en"
-"t('hook.zuiHouXiuGai')","../src/views/system/personnel/hook.tsx:71","hook","zuiHouXiuGai","最后修改时间","en"
-"t('hook.xiuGaiRenYuan')","../src/views/system/personnel/hook.tsx:100","hook","xiuGaiRenYuan","修改人员","en"
-"t('hook.queRenShanChu')","../src/views/system/personnel/hook.tsx:105","hook","queRenShanChu","确认删除该人员","en"
-"t('index.renYuanMingCheng')","../src/views/system/personnel/index.vue:44","index","renYuanMingCheng","人员名称：","en"
-"t('index.qingShuRuRen')","../src/views/system/personnel/index.vue:47","index","qingShuRuRen","请输入人员名称","en"
-"t('index.shouJiHaoMa')","../src/views/system/personnel/index.vue:51","index","shouJiHaoMa","手机号码：","en"
-"t('index.qingShuRuShou1')","../src/views/system/personnel/index.vue:54","index","qingShuRuShou1","请输入手机号码","en"
-"t('validate.zuiDuoGeZi')","../src/views/system/personnel/validate.ts:8","validate","zuiDuoGeZi","最多30 个字符","en"
-"t('validate.changDuZaiDao')","../src/views/system/personnel/validate.ts:12","validate","changDuZaiDao","长度在 6 到 18 个字符","en"
-"t('validate.qingZaiCiQue')","../src/views/system/personnel/validate.ts:20","validate","qingZaiCiQue","请再次确认密码","en"
-"t('validate.liangCiShuRu')","../src/views/system/personnel/validate.ts:22","validate","liangCiShuRu","两次输入密码不一致!","en"
-"t('validate.qingShuRuZheng')","../src/views/system/personnel/validate.ts:35","validate","qingShuRuZheng","请输入正确格式的手机号","en"
-"t('validate.qingXuanZeZhuang')","../src/views/system/personnel/validate.ts:40","validate","qingXuanZeZhuang","请选择状态","en"
-"t('addUpdate.tianJiaJiaoSe')","../src/views/system/role/addUpdate.vue:11","addUpdate","tianJiaJiaoSe","添加角色","en"
-"t('addUpdate.qingShuRuJiao')","../src/views/system/role/addUpdate.vue:37","addUpdate","qingShuRuJiao","请输入角色名","en"
-"t('addUpdate.qingShuRuJiao1')","../src/views/system/role/addUpdate.vue:38","addUpdate","qingShuRuJiao1","请输入角色描述","en"
-"t('addUpdate.jiaoSeMing')","../src/views/system/role/addUpdate.vue:113","addUpdate","jiaoSeMing","角色名","en"
-"t('addUpdate.jiaoSeMiaoShu')","../src/views/system/role/addUpdate.vue:120","addUpdate","jiaoSeMiaoShu","角色描述","en"
-"t('assignMenu.jiaZaiZhong')","../src/views/system/role/assignMenu.vue:34","assignMenu","jiaZaiZhong","加载中...","en"
-"t('assignMenu.zanWuShuJu')","../src/views/system/role/assignMenu.vue:73","assignMenu","zanWuShuJu","暂无数据","en"
-"t('assignMenu.jiaZaiShiBai')","../src/views/system/role/assignMenu.vue:92","assignMenu","jiaZaiShiBai","加载失败","en"
-"t('hook.bianJiJiaoSe')","../src/views/system/role/hook.tsx:83","hook","bianJiJiaoSe","编辑角色","en"
-"t('hook.queRenShanChu')","../src/views/system/role/hook.tsx:88","hook","queRenShanChu","确认删除该角色","en"
-"t('index.jiaoSeMing1')","../src/views/system/role/index.vue:44","index","jiaoSeMing1","角色名：","en"
-"t('index.jiaoSeMiaoShu1')","../src/views/system/role/index.vue:47","index","jiaoSeMiaoShu1","角色描述：","en"
-"t('index.xinZengJiaoSe')","../src/views/system/role/index.vue:73","index","xinZengJiaoSe","新增角色","en"
-"t('index.peiZhiCaiDan')","../src/views/system/role/index.vue:116","index","peiZhiCaiDan","配置菜单","en"
-"t('recharge.qingShuRuChan')","../src/views/water-bill/recharge.vue:7","recharge","qingShuRuChan","请输入产品名称","en"
-"t('recharge.qingXuanZeShu')","../src/views/water-bill/recharge.vue:8","recharge","qingXuanZeShu","请选择KYC属性","en"
-"t('recharge.yiJi')","../src/views/water-bill/recharge.vue:13","recharge","yiJi","一级KYC","en"
-"t('recharge.erJi')","../src/views/water-bill/recharge.vue:14","recharge","erJi","二级KYC","en"
-"t('recharge.sanJi')","../src/views/water-bill/recharge.vue:15","recharge","sanJi","三级KYC","en"
-"t('recharge.buXianZhi')","../src/views/water-bill/recharge.vue:16","recharge","buXianZhi","不限制","en"
-"t('recharge.sheZhiChengGong')","../src/views/water-bill/recharge.vue:37","recharge","sheZhiChengGong","设置成功！","en"
-"t('recharge.jiChuPeiZhi')","../src/views/water-bill/recharge.vue:62","recharge","jiChuPeiZhi","基础配置","en"
-"t('recharge.chanPinMingCheng')","../src/views/water-bill/recharge.vue:64","recharge","chanPinMingCheng","产品名称","en"
-"t('recharge.gouMaiYongHu')","../src/views/water-bill/recharge.vue:79","recharge","gouMaiYongHu","购买用户约束","en"
-"t('recharge.shuXing')","../src/views/water-bill/recharge.vue:81","recharge","shuXing","KYC属性","en"
-"t('recharge.baoCunSheZhi')","../src/views/water-bill/recharge.vue:106","recharge","baoCunSheZhi","保存设置","en"
-"t('record.dingDanBianHao')","../src/views/water-bill/record.vue:40","record","dingDanBianHao","订单编号：","en"
-"t('record.qingShuRuDing')","../src/views/water-bill/record.vue:41","record","qingShuRuDing","请输入订单编号","en"
-"t('record.jiaoFeiDanHao')","../src/views/water-bill/record.vue:43","record","jiaoFeiDanHao","缴费单号：","en"
-"t('record.qingShuRuJiao')","../src/views/water-bill/record.vue:44","record","qingShuRuJiao","请输入缴费单号","en"
-"t('record.jiaoYiShiJian')","../src/views/water-bill/record.vue:46","record","jiaoYiShiJian","交易时间：","en"
-"t('record.zhi')","../src/views/water-bill/record.vue:52","record","zhi","至","en"
-"t('record.kaiShiShiJian')","../src/views/water-bill/record.vue:53","record","kaiShiShiJian","开始时间","en"
-"t('record.jieShuShiJian')","../src/views/water-bill/record.vue:54","record","jieShuShiJian","结束时间","en"
-"t('record.zhuangTai')","../src/views/water-bill/record.vue:58","record","zhuangTai","状态：","en"
-"t('record.daoChu')","../src/views/water-bill/record.vue:81","record","daoChu","导出","en"
-"t('record.chongZhi')","../src/views/water-bill/record.vue:116","record","chongZhi","充值","en"
-"t('record.tuiKuan')","../src/views/water-bill/record.vue:126","record","tuiKuan","退款","en"
-"t('recordDialog.chongZhiChengGong')","../src/views/water-bill/recordDialog.vue:23","recordDialog","chongZhiChengGong","充值成功！","en"
-"t('recordDialog.jiaoFeiDanHao1')","../src/views/water-bill/recordDialog.vue:45","recordDialog","jiaoFeiDanHao1","缴费单号","en"
-"t('recordDialog.chongZhiBiZhong')","../src/views/water-bill/recordDialog.vue:49","recordDialog","chongZhiBiZhong","充值币种","en"
-"t('recordDialog.chongZhiMianE')","../src/views/water-bill/recordDialog.vue:53","recordDialog","chongZhiMianE","充值面额","en"
-"t('recordHook.daiFuKuan')","../src/views/water-bill/recordHook.tsx:21","recordHook","daiFuKuan","待付款","en"
-"t('recordHook.zhiFuWanCheng')","../src/views/water-bill/recordHook.tsx:22","recordHook","zhiFuWanCheng","支付完成","en"
-"t('recordHook.chongZhiWanCheng')","../src/views/water-bill/recordHook.tsx:23","recordHook","chongZhiWanCheng","充值完成","en"
-"t('recordHook.tuiKuanChengGong')","../src/views/water-bill/recordHook.tsx:24","recordHook","tuiKuanChengGong","退款成功","en"
-"t('recordHook.fuKuanZhong')","../src/views/water-bill/recordHook.tsx:26","recordHook","fuKuanZhong","付款中","en"
-"t('recordHook.tuiKuanZhong')","../src/views/water-bill/recordHook.tsx:27","recordHook","tuiKuanZhong","退款中","en"
-"t('recordHook.fuKuanShiBai')","../src/views/water-bill/recordHook.tsx:28","recordHook","fuKuanShiBai","付款失败","en"
-"t('recordHook.tuiKuanShiBai')","../src/views/water-bill/recordHook.tsx:29","recordHook","tuiKuanShiBai","退款失败","en"
-"t('recordHook.yiQuXiao')","../src/views/water-bill/recordHook.tsx:30","recordHook","yiQuXiao","已取消","en"
-"t('recordHook.dingDanBianHao1')","../src/views/water-bill/recordHook.tsx:56","recordHook","dingDanBianHao1","订单编号","en"
-"t('recordHook.yongHu')","../src/views/water-bill/recordHook.tsx:60","recordHook","yongHu","用户ID","en"
-"t('recordHook.shouJiHaoMa')","../src/views/water-bill/recordHook.tsx:64","recordHook","shouJiHaoMa","手机号码","en"
-"t('recordHook.qianBaoMingCheng')","../src/views/water-bill/recordHook.tsx:71","recordHook","qianBaoMingCheng","钱包名称","en"
-"t('recordHook.chanPin')","../src/views/water-bill/recordHook.tsx:75","recordHook","chanPin","产品ID","en"
-"t('recordHook.jiaoFeiBiZhong')","../src/views/water-bill/recordHook.tsx:83","recordHook","jiaoFeiBiZhong","缴费币种","en"
-"t('recordHook.qianFeiJinE')","../src/views/water-bill/recordHook.tsx:87","recordHook","qianFeiJinE","欠费金额","en"
-"t('recordHook.fuKuanBiZhong')","../src/views/water-bill/recordHook.tsx:91","recordHook","fuKuanBiZhong","付款币种","en"
-"t('recordHook.fuKuanJinE')","../src/views/water-bill/recordHook.tsx:95","recordHook","fuKuanJinE","付款金额","en"
-"t('recordHook.jiaoYiShiJian1')","../src/views/water-bill/recordHook.tsx:108","recordHook","jiaoYiShiJian1","交易时间","en"
-"t('recordHook.queDingYaoWei')","../src/views/water-bill/recordHook.tsx:129","recordHook","queDingYaoWei","确定要为该用户退款?","en"
-"t('recordHook.shuiFeiChongZhi')","../src/views/water-bill/recordHook.tsx:167","recordHook","shuiFeiChongZhi","水费充值记录","en"
-"t('index.huanYingShiYong')","../src/views/welcome/index.vue:10","index","huanYingShiYong","欢迎使用水费后台管理系统","en"
+comment,FilePath,preId,id,zh-cn,en-us,km,vi,th,Lo,hi
+,,language,l,中文,英文,柬埔寨,越南,泰国,老挝,印度
+t('response.dengLuYiJing'),../src/api/response.ts:25,response,dengLuYiJing,"登录已经失效,请重新登录","Login has expired, please login again",,"Đăng nhập không thành công, vui lòng đăng nhập lại",ล็อกอินล้มเหลวแล้ว โปรดล็อกอินใหม่,"ການເຂົ້າສູ່ລະບົບໝົດອາຍຸແລ້ວ,ກະລຸນາເຂົ້າສູ່ລະບົບອີກຄັ້ງ","लॉगिन अमान्य बन गई है, कृपया पुनः लॉग इन करें"
+t('index.jinYongQingQiu'),../src/api/swagger2api/index.js:58,index,jinYongQingQiu,禁用请求信息,Disable Request Message,,Vô hiệu hoá thông tin yêu cầu,ห้ามใช้ข้อมูลการขอ,ຫ້າມໃຊ້ຂໍ້ມູນການຮ້ອງຂໍ,अनुरोध जानकारी अक्षम
+t('AppConfirm.zunJingDeKe'),../src/components/AppConfirm.vue:30,AppConfirm,zunJingDeKe,尊敬的客户，本期理财投资尚未到期，撤销将不计本期收益，请确认是否执行撤销操作,"Dear customer, the current financial investment has not yet matured. Cancellation will not count towards the current period's income. Please confirm whether to proceed with the cancellation operation",,"Khách hàng thân mến, khoản đầu tư quản lý tài chính hiện tại chưa đến kỳ hạn, hủy bỏ sẽ không được tính lãi cho kỳ này. Vui lòng xác nhận có thực hiện thao tác hủy bỏ hay không",ลูกค้าที่เคารพ การลงทุนและการบริหารการเงินครั้งนี้ยังไม่หมดอายุ การยกเลิกจะไม่นับผลกำไรที่ได้รับในครั้งนี้ โปรดยืนยันที่จะยกเลิกการดำเนินการต่อหรือไม่,"ລູກຄ້າທີ່ຮັກແພງ,ການລົງທຶນການຄຸ້ມຄອງຊັບສິນໄລຍະນີ້ຍັງບໍ່ທັນຫມົດອາຍຸ,ຖ້າຍົກເລີກຈະບໍ່ຖືກນັບເຂົ້າໃນລາຍໄດ້ຂອງໄລຍະເວລາໃນໄລຍະນີ້,ກະລຸນາຢືນຢັນວ່າຈະດໍາເນີນການຍົກເລີກຫຼືບໍ?","प्रिय ग्राहक, वर्तमान निवेश की अवधि अभी समाप्त नहीं हुई है, और रद्दीकरण करके वर्तमान अवधि की आय नहीं गिनी जाएगी। कृपया पुष्टि करें कि रद्दीकरण ऑपरेशन करना है या नहीं"
+t('AppConfirm.cheXiao'),../src/components/AppConfirm.vue:31,AppConfirm,cheXiao,撤销,Withdrawal,,Huỷ bỏ,ยกเลิก,ຍົກເລີກ,रद्द करें 
+t('AppConfirm.buCheXiao'),../src/components/AppConfirm.vue:32,AppConfirm,buCheXiao,不撤销,Unwithdrawn,,Không huỷ bỏ,ไม่ยกเลิก,ບໍ່ຍົກເລີກ,रद्द न करें 
+t('AppEmpty.zanWuShuJu'),../src/components/AppEmpty.vue:28,AppEmpty,zanWuShuJu,暂无数据,There is currently no data available,,Tạm thời không có dữ liệu,ยังไม่มีข้อมูล,ບໍ່ມີຂໍ້ມູນເປັນຊົ່ວຄາວ,कोई डेटा नहीं
+t('InfoConfirm.queRenBingFu'),../src/components/InfoConfirm.vue:20,InfoConfirm,queRenBingFu,确认并付款,Confirm and Payment,,Xác nhận và thanh toán,ยืนยันและชำระเงิน,ຕົກລົງແລະຈ່າຍເງິນ,भुगतान करें 
+t('ResultPageDetail.wanCheng'),../src/components/ResultPageDetail.vue:9,ResultPageDetail,wanCheng,完成,Finished,,Hoàn thành,เสร็จสิ้น,ສຳເລັດ,तकमील करें 
+t('SatelliteBgView.zhiFuChengGong'),../src/components/SatelliteBgView.vue:177,SatelliteBgView,zhiFuChengGong,支付成功,Payment successful ,,Thanh toán thành công,ชำระสำเร็จ,ການຈ່າຍເງິນເປັນສຳເລັດ,भुगतान सफल
+t('SatelliteBgView.qingGuanZhuDao'),../src/components/SatelliteBgView.vue:190,SatelliteBgView,qingGuanZhuDao,请关注到账信息,Please pay attention to the receipt information,,Vui lòng để ý thông tin nhận tiền,โปรดติดตามข้อมูลเข้าถึงบัญชี,ກະລຸນາໃສ່ໃຈກັບຂໍ້ມູນການເຂົ້າຮອດບັນຊີ,कृपया खाते में प्राप्ति की सूचना पर ध्यान दें
+t('SelectCurrency.biZhongXuanZe'),../src/components/SelectCurrency.vue:54,SelectCurrency,biZhongXuanZe,币种选择,Currency Selection,,Chọn tiền tệ,การเลือกสกุลเงิน,ການເລືອກສະກຸນເງິນ,मुद्रा चयन 
+t('SelectCurrencyGeneral.quanBuJiaoYi'),../src/components/SelectCurrencyGeneral.vue:27,SelectCurrencyGeneral,quanBuJiaoYi,全部交易对,All Transaction Pairs,,Tất cả cặp giao dịch,สองสินทรัพย์ดิจิทัลที่แลกเปลี่ยนกันได้ทั้งหมด,ຄູ່ການຄ້າທັງໝົດ,सभी ट्रेडिंग पेअर
+t('SelectCurrencyGeneral.quanBuHuoBi'),../src/components/SelectCurrencyGeneral.vue:33,SelectCurrencyGeneral,quanBuHuoBi,全部货币,All Currencies,,Tất cả tiền tệ,สกุลเงินทั้งหมด,ເງິນຕາທັງໝົດ,सभी मुद्राएँ
+t('SelectStatus.buXian'),../src/components/SelectStatus.vue:23,SelectStatus,buXian,不限,Unlimited,,Không giới hạn,ไม่จำกัด,ບໍ່ມີຈຳກັດ,असीमित
+t('SelectStatus.weiZhiZhuangTai'),../src/components/SelectStatus.vue:27,SelectStatus,weiZhiZhuangTai,未知状态,Unknown Status,,Trạng thái không xác định,สถานะที่ไม่ทราบ,ສາຖານະທີ່ບໍ່ຮູ້ຈັກ,अज्ञात स्थिति
+t('SelectTimePair.queDing'),../src/components/SelectTimePair.vue:142,SelectTimePair,queDing,确定,OK,,Xác nhận và thanh toán,ยืนยัน,ຕົກລົງ,पुष्टि करें 
+t('index.shouYe'),../src/router/index.ts:12,index,shouYe,首页,Home Page,,Trang chủ,หน้าแรก,ໜ້າຈໍທີໜຶ່ງ,मुखपृष्ठ
+t('index.shiLi'),../src/router/index.ts:28,index,shiLi,示例,Examples,,Ví dụ,ตัวอย่าง,ຕົວຢ່າງ,इंस्टैंस
+t('index.duiHui'),../src/router/index.ts:36,index,duiHui,兑汇,Currency Exchange,,Đổi tiền tệ,แลกเปลี่ยน,ການແລກປ່ຽນເງິນ,मुद्रा विनिमय
+t('index.duiHuiJiLu'),../src/router/index.ts:53,index,duiHuiJiLu,兑汇记录,Currency Exchange History,,Ghi chép đổi tiền tệ,บันทึกการแลกเปลี่ยน,ບັນທຶກການແລກປ່ຽນເງິນ,मुद्रा विनिमय रेकॉर्ड
+t('index.duiHuiXiangQing'),../src/router/index.ts:62,index,duiHuiXiangQing,兑汇详情,Currency Exchange Details,,Chi tiết đổi tiền tệ,รายละเอียดการแลกเปลี่ยน,ລາຍລະອຽດການແລກປ່ຽນເງິນ,मुद्रा विनिमय विवरण
+t('exchange.huoQuXinXi'),../src/store/module/exchange.ts:60,exchange,huoQuXinXi,获取KYC信息失败,Failed to get KYC information,,Nhận thông tin KYC không thành công,การรับข้อมูลKYCล้มเหลว,ການໄດ້ຮັບຂໍ້ມູນ KYC ບໍ່ສຳເລັດ,KYC जानकारी प्राप्त करने में विफल
+t('exchange.shouQuanShiBai'),../src/store/module/exchange.ts:75,exchange,shouQuanShiBai,授权失败,Authorization Failure,,Ủy quyền thất bại,การมอบอำนาจล้มเหลว,ການມອບໝາຍບໍ່ສຳເລັດ,अधिकरण विफल हुआ
+t('index.queRen'),../src/utils/index.ts:5,index,queRen,确认,Confirm,,Xác nhận,ตกลง,ຕົກລົງ,पुष्टि करें
+t('index.quXiao'),../src/utils/index.ts:6,index,quXiao,取消,Cancel,,Huỷ,ยกเลิก,ຍົກເລີກ,रद्द करें
+t('examples.dingDanJinE'),../src/views/examples.vue:26,examples,dingDanJinE,订单金额,Order Amount,,Số tiền lệnh,ยอดเงินออร์เดอร์,ຈຳນວນເງິນໃບສັ່ງ,ऑर्डर की राशि
+t('examples.yeWuLeiXing'),../src/views/examples.vue:27,examples,yeWuLeiXing,业务类型,Business Type,,Loại hình nghiệp vụ,ประเภทกิจการ,ປະເພດທຸລະກິດ,व्यापार के प्रकार
+t('examples.liCaiDingQi'),../src/views/examples.vue:27,examples,liCaiDingQi,理财-定期理财,Wealth Management-Fixed-term Wealth Management,,Quản lý tài chính - Quản lý tài chính có kỳ hạn,การบริหารการเงิน-การบริหารการเงินตามเวลากำหนด,ການຄຸ້ມຄອງຊັບສິນ-ການຄຸ້ມຄອງຊັບສິນເປັນປະຈຳ,वित्तीय प्रबंधन - टाइम डिपॉजिट वित्तीय प्रबंधन
+t('examples.zhiFuFangShi'),../src/views/examples.vue:28,examples,zhiFuFangShi,支付方式,Payment Method,,Phương thức thanh toán,วิธีชำระ,ວິທີການຈ່າຍເງິນ,भुगतान विधि
+t('examples.yuE'),../src/views/examples.vue:28,examples,yuE,余额USD,Balance USD,,Số tiền USD,ยอดเงินที่เหลือUSD,ເງິນເຫຼືອ USD ,शेष राशि USD
+t('examples.biaoTi'),../src/views/examples.vue:32,examples,biaoTi,标题1,Title 1,,Tiêu đề 1,หัวข้อ1,ຫົວຂໍ 1,शीर्षक 1
+t('examples.fuBiaoTi'),../src/views/examples.vue:33,examples,fuBiaoTi,副标题,Subtitle,,Tiêu đề phụ,หัวข้อรอง,ຫົວຂໍສຳຮອງ,उपशीर्षक
+t('examples.biaoTi1'),../src/views/examples.vue:36,examples,biaoTi1,标题2,Title 2,,Tiêu đề 2,หัวข้อ2,ຫົວຂໍ 2,शीर्षक 2
+t('examples.biaoTi2'),../src/views/examples.vue:40,examples,biaoTi2,标题3,Title 3,,Tiêu đề 3,หัวข้อ3,ຫົວຂໍ 3,शीर्षक 3
+t('examples.biaoTi3'),../src/views/examples.vue:44,examples,biaoTi3,标题4,Title 4,,Tiêu đề 4,หัวข้อ4,ຫົວຂໍ 4,शीर्षक 4
+t('examples.xuanZeQi'),../src/views/examples.vue:81,examples,xuanZeQi,选择器,Selector,,Bộ chọn,ตัวเลือก,ເຄື່ອງເລືອກ,चयनकर्ता
+t('examples.biZhong'),../src/views/examples.vue:86,examples,biZhong,币种,currency type,,Tiền tệ,สกุลเงิน,ສະກຸນເງິນ,मुद्रा
+t('examples.dingDanQueRen'),../src/views/examples.vue:91,examples,dingDanQueRen,订单确认,Order Confirmation,,Xác nhận lệnh,การยืนยันออร์เดอร์,ການຕົກລົງໃບສັ່ງ,ऑर्डर की पुष्टि
+t('examples.queRenDanKuang'),../src/views/examples.vue:104,examples,queRenDanKuang,确认弹框,Confirmation Popup,,Hộp thoại xác nhận,กล่องยืนยัน,ຂອບສະເດັນການຕົກລົງ,पुष्टिकरण बॉक्स
+t('Filter.quanBu'),../src/views/exchange/components/Filter.vue:46,Filter,quanBu,全部,All,,Toàn bộ,ทั้งหมด,ທັງໝົດ,सभी
+t('Filter.shaiXuan'),../src/views/exchange/components/Filter.vue:170,Filter,shaiXuan,筛选,Filter,,Lọc,คัดเลือก,ເລືອກ,फ़िल्टर
+t('Filter.jiaoYiDui'),../src/views/exchange/components/Filter.vue:173,Filter,jiaoYiDui,交易对,TransactionPairs,,Cặp giao dịch,สองสินทรัพย์ดิจิทัลที่แลกเปลี่ยนกันได้,ຄູ່ການຄ້າ ,ट्रेडिंग पेअर 
+t('Filter.shiJian'),../src/views/exchange/components/Filter.vue:184,Filter,shiJian,时间,Time,,Thời gian,เวลา,ເວລາ ,समय
+t('Filter.keJianSuoFan'),../src/views/exchange/components/Filter.vue:198,Filter,keJianSuoFan,可检索范围：12个月,Searchable range: 12 months,,Phạm vi có thể kiểm tra: 12 tháng,เวลาที่สามารถตรวจสอบค้นหาได้: 12 เดือน,ຂອບເຂດທີ່ສາມາດກວດສອບ:12 ເດືອນ,खोजने का दायरा: 12 महीने
+t('Filter.zhongZhi'),../src/views/exchange/components/Filter.vue:202,Filter,zhongZhi,重置,Reset,,Đặt lại,ตั้งค่าใหม่,ຕິດຕັ້ງໃໝ່,रीसेट
+t('Filter.xuanZeKaiShi'),../src/views/exchange/components/Filter.vue:223,Filter,xuanZeKaiShi,选择开始时间,Select start time,,Chọn thời gian bắt đầu,เลือกเวลาเริ่มต้น,ເລືອກເວລາເລີ່ມຕົ້ນ,आरंभ समय चुनें
+t('Filter.xuanZeJieShu'),../src/views/exchange/components/Filter.vue:228,Filter,xuanZeJieShu,选择结束时间,Select end time,,Chọn thời gian kết thúc,เลือกเวลาสิ้นสุด,ເລືອກເວລາສິນສຸດ,अंत समय चुनें
+t('index.yuE'),../src/views/exchange/index.vue:93,index,yuE,余额,Balance,,Số dư,ยอดคงเหลือ,ເງິນເຫຼືອ  ,शेष राशि 
+t('index.duiHuanJinE'),../src/views/exchange/index.vue:98,index,duiHuanJinE,兑换金额不能为空,The exchange amount cannot be empty,,Số tiền đổi không được để trống,ยอดเงินแลกเปลี่ยนว่างเปล่าไม่ได้,ຈໍານວນເງິນການແລກປ່ຽນບໍ່ສາມາດຫວ່າງເປົ່າໄດ້,विनिमय राशि रिक्त नहीं हो सकती
+t('index.duiHuanJinE1'),../src/views/exchange/index.vue:99,index,duiHuanJinE1,兑换金额不能为0,The exchange amount cannot be 0,,Số tiền đổi không được bằng 0,ยอดเงินแลกเปลี่ยนห้ามเป็น0,ຈໍານວນເງິນການແລກປ່ຽນບໍ່ສາມາດເປັນ 0,विनिमय राशि 0 नहीं हो सकती
+t('index.duiHuanJinE2'),../src/views/exchange/index.vue:104,index,duiHuanJinE2,兑换金额不能小于最小兑换金额,The exchange amount cannot be less than the minimum exchange amount,,Số tiền đổi không được nhỏ hơn số tiền đổi tối thiểu,ยอดเงินแลกเปลี่ยนห้ามน้อยกว่ายอดเงินแลกเปลี่ยนน้อยสุด,ຈໍານວນເງິນການແລກປ່ຽນບໍ່ສາມາດຫນ້ອຍກວ່າຈໍານວນເງິນການແລກປ່ຽນຕໍາ່ສຸດທີ່,विनिमय राशि न्यूनतम विनिमय राशि से कम नहीं हो सकती
+t('index.duiHuanJinE3'),../src/views/exchange/index.vue:113,index,duiHuanJinE3,兑换金额不能大于单次最大限额,The exchange amount cannot be greater than the maximum limit for a single transaction,,Số tiền đổi không được lớn hơn hạn mức tối đa cho một lần đổi,ยอดเงินแลกเปลี่ยนห้ามมากกว่ายอดเงินแลกเปลี่ยนที่จำกัดมากสุด,ຈໍານວນເງິນການແລກປ່ຽນບໍ່ສາມາດໃຫຍ່ກວ່າຈໍານວນເງິນການແລກປ່ຽນທີ່ໃຫຍ່ສຸດທີ່,विनिमय राशि एकल अधिकतम सीमा से अधिक नहीं हो सकती
+t('index.duiHuanJinE4'),../src/views/exchange/index.vue:117,index,duiHuanJinE4,兑换金额不能大于可用余额,The exchange amount cannot be greater than the available balance,,Số tiền đổi không được lớn hơn số dư khả dụng,ยอดเงินแลกเปลี่ยนห้ามมากกว่ายอกคงเหลือที่สามารถใช้ได้,ຈໍານວນເງິນແລກປ່ຽນບໍ່ສາມາດຫຼາຍກວ່າເງິນເຫຼືອທີ່ມີຢູ່,विनिमय राशि उपलब्ध शेष राशि से अधिक नहीं हो सकती
+t('index.huoQuZhangHu'),../src/views/exchange/index.vue:145,index,huoQuZhangHu,获取账户信息失败,Failed to obtain account information,,Thu thập thông tin tài khoản không thành công,การรับข้อมูลบัญชีล้มเหลว,ການຮັບເອົາຂໍ້ມູນບັນຊີບໍ່ສຳເລັດ,खाता जानकारी प्राप्त करने में विफल
+t('index.jiaoYiDuiBu'),../src/views/exchange/index.vue:218,index,jiaoYiDuiBu,交易对不存在,Transaction pair does not exist,,Cặp giao dịch không tồn tại,ไม่มีสองสินทรัพย์ดิจิทัลที่แลกเปลี่ยนกันได้,ຄູ່ການຄ້າບໍ່ມີຢູ່,ट्रेडिंग पेअर मौजूद नहीं है
+t('index.cong'),../src/views/exchange/index.vue:357,index,cong,从,From,,Từ,จาก,ຈາກ,से
+t('index.zuiDa'),../src/views/exchange/index.vue:377,index,zuiDa,最大,Maximum,,Tối đa,มากสุด,ໃຫຍ່ທີ່ສຸດ,अधिकतम
+t('index.keYongYuE'),../src/views/exchange/index.vue:383,index,keYongYuE,可用余额,Available balance,,Số dư khả dụng,ยอกคงเหลือที่สามารถใช้ได้,ເງິນເຫຼືອທີ່ສາມາດໃຊ້ໄດ້,उपलब्ध शेष राशि
+t('index.huiShuai'),../src/views/exchange/index.vue:387,index,huiShuai,汇率,Exchange rate,,Tỷ giá,อัตราแลกเปลี่ยน,ອັດຕາແລກປ່ຽນ,विनिमय दर
+t('index.zhi'),../src/views/exchange/index.vue:402,index,zhi,至,To,,Đến,ถึง,ເຖິງ,तक 
+t('record-info.daiZhiFu'),../src/views/exchange/record-info.vue:27,record-info,daiZhiFu,待支付,To be paid,,Chờ thanh toán,รอชำระ,ການຈ່າຍເງິນທີ່ຍັງຄ້າງຢູ່,देय भुगतान 
+t('record-info.yiQuXiao'),../src/views/exchange/record-info.vue:28,record-info,yiQuXiao,已取消,Cancelled,,Đã huỷ,ยกเลิกแล้ว,ຍົກເລີກແລ້ວ,रद्द किया गया
+t('record-info.yiWanCheng'),../src/views/exchange/record-info.vue:29,record-info,yiWanCheng,已完成,Completed,,Đã hoàn thành,เสร็จสิ้นแล้ว,ສຳເລັດແລ້ວ,तकमील किया गया
+t('record-info.yiTuiKuan'),../src/views/exchange/record-info.vue:30,record-info,yiTuiKuan,已退款,Refunded ,,Đã hoàn tiền,คืนเงินแล้ว,ສົ່ງຄືນເງິນໄດ້ແລ້ວ,रिफंड किया गया
+t('record-info.huoQuXiangQing'),../src/views/exchange/record-info.vue:39,record-info,huoQuXiangQing,获取详情失败,Failed to obtain details,,Thu thập thông tin chi tiết không thành công,การรับรายละเอียดข้อมูลล้มเหลว,ຮັບລາຍລະອຽດບໍ່ສຳເລັດ,विवरण प्राप्त करना विफल
+t('record-info.duiHuiShiJian'),../src/views/exchange/record-info.vue:118,record-info,duiHuiShiJian,兑汇时间,Exchange exchange time,,Thời gian đổi tiền,เวลาแลกเปลี่ยน,ເວລາການແລກປ່ຽນ,विनिमय का समय
+t('record-info.duiChu'),../src/views/exchange/record-info.vue:124,record-info,duiChu,`兑出${detailData.acceptSymbol}`,`Cash out ${detailData. acceptSymbol}`,,`Đổi ra${detailData.acceptSymbol}`,`แลกออก${detailData.acceptSymbol}`,`ການແລກປ່ຽນອອກ ${detailData.acceptSymbol}`,`बेचे ${detailData.acceptSymbol}`
+t('record-info.duiRu'),../src/views/exchange/record-info.vue:128,record-info,duiRu,`兑入${detailData.cashSymbol}`,`Cash in ${detailData. cashSymbol}`,,`Đổi vào${detailData.cashSymbol}`,`แลกเข้า${detailData.cashSymbol}`,`ການແລກປ່ຽນເຂົ້າ ${detailData.acceptSymbol}`,`खरीदे ${detailData.cashSymbol}`
+t('record-info.houQuXiao'),../src/views/exchange/record-info.vue:135,record-info,houQuXiao,后取消,post-cancellation,,Huỷ sau,แล้วยกเลิก,ແລ້ວຍົກເລີກ,के बाद रद्द करें 
+t('record-info.fuKuan'),../src/views/exchange/record-info.vue:140,record-info,fuKuan,付款,payment,,Thanh toán,ชำระเงิน,ຈ່າຍເງິນ,भुगतान करें 
+t('record-info.chaKanZhangDan'),../src/views/exchange/record-info.vue:144,record-info,chaKanZhangDan,查看账单详情,View billing details,,Xem chi tiết hoá đơn,เช็คดูรายละเอียดของบัญชี,ກວດເບິ່ງລາຍລະອຽດຂອງໃບບິນ,बिल विवरण देखें
+t('record.jiaoYiShiBai'),../src/views/exchange/record.vue:49,record,jiaoYiShiBai,"交易失败,已退款","Transaction failed, refunded",,"Giao dịch không thành công, đã hoàn tiền",ซื้อขายล้มเหลว คืนเงินแล้ว,"ການຄ້າບໍ່ສຳເລັດ,ສົ່ງເງິນຄືນແລ້ວ","लेन-देन विफल रहा, रिफंड कर दी गई"
+t('record.jiaoYiShiBai1'),../src/views/exchange/record.vue:103,record,jiaoYiShiBai1,交易失败，已退款,"Transaction failed, refunded",,"Giao dịch không thành công, đã hoàn tiền",ซื้อขายล้มเหลว  คืนเงินแล้ว,"ການຄ້າບໍ່ສຳເລັດ,ສົ່ງເງິນຄືນແລ້ວ","लेन-देन विफल रहा, रिफंड कर दी गई"
+t('record.zhaoBuDaoYong'),../src/views/exchange/record.vue:107,record,zhaoBuDaoYong,找不到用户ID,User ID not found,,Không tìm thấy ID người dùng,หาIDผู้ใช้ไม่เจอ,ບໍ່ສາມາດພົບ ID ຂອງຜູ້ໃຊ້,उपयोगकर्ता ID नहीं मिला
+t('record.zhuangTai'),../src/views/exchange/record.vue:253,record,zhuangTai,状态,Status,,Trạng thái,สถานะ,ສະຖານະການ,स्थिति 
+t('record.shiJianShaiXuan'),../src/views/exchange/record.vue:261,record,shiJianShaiXuan,时间筛选,Time filtering,,Lọc theo thời gian,คัดเลือกเวลา,ການເລືອກເວລາ,समय फ़िल्टर
+t('record.duiChu1'),../src/views/exchange/record.vue:303,record,duiChu1,兑出,Cash out,,Đổi ra,แลกออก,ການປ່ຽນອອກ,बेचे
+t('result.dingDanWanCheng'),../src/views/exchange/result.vue:19,result,dingDanWanCheng,订单完成,Order completion,,Hoàn thành lệnh,เสร็จสิ้นออร์เดอร์,ໃບສັ່ງໄດ້ສຳເລັດ,आर्डर पूरा हुआ
