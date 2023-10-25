@@ -3,8 +3,8 @@ const csv = require('csv-parser');
 const path = require("path");
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-const INPUT_DIR = '../splitCsv_json/output';
-const OUTPUT_DIR = '../splitCsv_json/src';
+const INPUT_DIR = '../splitCsv_yaml/output';
+const OUTPUT_DIR = '../splitCsv_yaml/src';
 
 let csvFiles = fs.readdirSync(INPUT_DIR).filter(file => path.extname(file) === '.csv');
 
@@ -23,6 +23,9 @@ csvFiles.forEach(CSV_FILE => {
 for (let baseName in fileGroups) {
   let finalTranslations = {};
 
+  // Use a counter to determine when we've finished processing all files in the current group
+  let filesProcessed = 0;
+
   fileGroups[baseName].forEach(CSV_FILE => {
     fs.createReadStream(path.join(INPUT_DIR, CSV_FILE))
       .pipe(csv())
@@ -40,9 +43,11 @@ for (let baseName in fileGroups) {
         }
       })
       .on('end', () => {
+        filesProcessed++;
+
         // Once all files of the current group have been read, write to the merged CSV
-        if (CSV_FILE === fileGroups[baseName][fileGroups[baseName].length - 1]) {
-          const headers = ['version', 'comment', 'id'];
+        if (filesProcessed === fileGroups[baseName].length) {
+          const headers = ['version', 'comment', 'preId', 'id'];
 
           // Find all unique headers from the collected data
           for (let id in finalTranslations) {
@@ -53,7 +58,7 @@ for (let baseName in fileGroups) {
             }
           }
 
-          const mergedCsvPath = path.join(OUTPUT_DIR, `${baseName}_translations_merged.csv`);
+          const mergedCsvPath = path.join(OUTPUT_DIR, `${baseName}_merged.csv`);
 
           const csvWriter = createCsvWriter({
             path: mergedCsvPath,
