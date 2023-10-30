@@ -12,8 +12,10 @@
     "translate": "cd tools && node translate.js",
     "splitCsv_json": "cd tools && node splitCsv_json.js",
     "splitCsv_yaml": "cd tools && node splitCsv_yaml.js",
+    "splitCsv": "cd tools && node splitCsv.js",
     "mergeCsv_json": "cd tools && node mergeCsv_json.js",
     "mergeCsv_yaml": "cd tools && node mergeCsv_yaml.js",
+    "mergeCsv": "cd tools && node mergeCsv.js",
     "newGetChinese": "cd tools && node newGetChinese.js"
   },
   "dependencies": {
