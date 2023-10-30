@@ -3,8 +3,8 @@ const path = require('path');
 const yaml = require('js-yaml');
 const createCsvStringifier = require('csv-writer').createObjectCsvStringifier;
 
-const yamlDir = '../splitCsv_yaml/src';
-const outputCSV = '../splitCsv_yaml/output/yamlToCsv_data.csv';
+const yamlDir = '../toCsv_yaml/src';
+const outputCSV = '../toCsv_yaml/output/translations.csv';
 
 // Get the list of yaml files in the "yaml" directory
 let yamlFiles = fs.readdirSync(yamlDir).filter(file => path.extname(file) === '.yaml');
@@ -20,19 +20,32 @@ for (let yamlFile of yamlFiles) {
 
   // Convert the yaml data and merge it into accumulatedData
   for (let [preId, content] of Object.entries(yamlData)) {
-    for (let [id, value] of Object.entries(content)) {
-      let combinedId = `${preId}_${id}`;  // A combined key to uniquely identify the entry
-
+    if(typeof content === 'string'){
+      let combinedId = `${preId}`;  // A combined key to uniquely identify the entry
       if (!accumulatedData[combinedId]) {
         accumulatedData[combinedId] = {
           version: '',       // Initialize version and comment with empty values
           comment: '',
           preId: preId,
-          id: id
+          id: ''
         };
       }
+      accumulatedData[combinedId][columnName] = content;
+    } else{
+      for (let [id, value] of Object.entries(content)) {
+        let combinedId = `${preId}_${id}`;  // A combined key to uniquely identify the entry
 
-      accumulatedData[combinedId][columnName] = value;
+        if (!accumulatedData[combinedId]) {
+          accumulatedData[combinedId] = {
+            version: '',       // Initialize version and comment with empty values
+            comment: '',
+            preId: preId,
+            id: id
+          };
+        }
+
+        accumulatedData[combinedId][columnName] = value;
+      }
     }
   }
 }

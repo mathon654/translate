@@ -6,7 +6,9 @@
     "getChinese": "cd tools && node getChinese.js",
     "checkChinese": "cd tools && node checkChinese.js",
     "csvToYaml": "cd tools && node csvToYaml.js",
+    "tsToYaml": "cd tools && node tsToYaml.js",
     "yamlTocsv": "cd tools && node yamlTocsv.js",
+    "jsonTocsv": "cd tools && node jsonTocsv.js",
     "translate": "cd tools && node translate.js",
     "splitCsv_json": "cd tools && node splitCsv_json.js",
     "splitCsv_yaml": "cd tools && node splitCsv_yaml.js",
@@ -18,9 +20,9 @@
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "js-yaml": "^4.1.0",
-    "pinyin": "^pinyin@3.0.0-alpha.5",
     "prettier": "^2.8.7",
-    "puppeteer-core": "^21.0.1"
+    "puppeteer-core": "^21.0.1",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",

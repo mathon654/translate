@@ -3,8 +3,8 @@ const csv = require("csv-parser");
 const yaml = require("js-yaml");
 
 // 常量定义
-const CSV_FILE = "../outPut/translations.csv";
-const LOCAL_DIR = "../locales";
+const CSV_FILE = "../csvToYaml/src/translations.csv"
+const LOCAL_DIR = "../csvToYaml/output/"
 
 let data = [];
 let totalRows = 0;

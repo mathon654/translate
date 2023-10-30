@@ -31,6 +31,7 @@ csvFiles.forEach(CSV_FILE => {
       if (usedIds.includes(id)) {
         throw new Error(`The id "${id}" in row ${totalRows} is duplicated!`);
       }
+      // Store the values for version, comment, preId, id, and zh
 
       for (let lang in row) {
         if (!EXCLUDED_COLUMNS.includes(lang) && row[lang]) {
@@ -48,6 +49,8 @@ csvFiles.forEach(CSV_FILE => {
       const data = [];
       for (let id in translations[lang]) {
         const row = {
+          version: translations['version'],
+          comment: translations['comment'],
           id: id,
           zh: translations['zh'] ? translations['zh'][id] : '',
           [lang]: translations[lang][id]
@@ -60,6 +63,8 @@ csvFiles.forEach(CSV_FILE => {
       const csvWriter = createCsvWriter({
         path: csvFilePath,
         header: [
+          {id: 'version', title: 'version'},
+          {id: 'comment', title: 'comment'},
           {id: 'id', title: 'id'},
           {id: 'zh', title: 'zh'},
           {id: lang, title: lang}
