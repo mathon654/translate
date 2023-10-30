@@ -10,7 +10,7 @@ const OUTPUT_DIR = '../splitCsv/output';
 let csvFiles = fs.readdirSync(CSV_DIR).filter(file => path.extname(file) === '.csv');
 
 csvFiles.forEach(CSV_FILE => {
-  let usedIds = [];
+  let usedPairs = []; // Store pairs of id and preId
   let totalRows = 0;
   let validRows = 0;
   let translations = {};
@@ -22,22 +22,25 @@ csvFiles.forEach(CSV_FILE => {
     .on('data', row => {
       totalRows++;
 
-      const id = row['id'];
+      let id = row['id'];
+      let preId = row['preId'];
 
-      if (!id) {
-        throw new Error(`The id of row ${totalRows} is empty!`);
+      if (!id && !preId) {
+        throw new Error(`Both id and preId of row ${totalRows} are empty!`);
       }
 
-      if (usedIds.includes(id)) {
-        throw new Error(`The id "${id}" in row ${totalRows} is duplicated!`);
+      let pair = `${id}_${preId}`;
+
+      if (usedPairs.includes(pair)) {
+        // If both id and preId are duplicated, skip the row
+        return;
       }
 
-      // Store the values for version, comment, preId, id, and zh
       ['version', 'comment', 'preId', 'id', 'zh'].forEach(col => {
         if (!translations[col]) {
           translations[col] = {};
         }
-        translations[col][id] = row[col];
+        translations[col][pair] = row[col];
       });
 
       for (let lang in row) {
@@ -45,25 +48,25 @@ csvFiles.forEach(CSV_FILE => {
           if (!translations[lang]) {
             translations[lang] = {};
           }
-          translations[lang][id] = row[lang];
+          translations[lang][pair] = row[lang];
         }
       }
 
-      usedIds.push(id);
+      usedPairs.push(pair);
       validRows++;
     }).on('end', () => {
     for (let lang in translations) {
       if (EXCLUDED_COLUMNS.includes(lang)) continue;  // Skip non-language columns
 
       const data = [];
-      for (let id in translations[lang]) {
+      for (let pair in translations[lang]) {
         const row = {
-          version: translations['version'][id],
-          comment: translations['comment'][id],
-          preId: translations['preId'][id],
-          id: id,
-          zh: translations['zh'][id],
-          [lang]: translations[lang][id]
+          version: translations['version'][pair],
+          comment: translations['comment'][pair],
+          preId: translations['preId'][pair],
+          id: translations['id'][pair],
+          zh: translations['zh'][pair],
+          [lang]: translations[lang][pair]
         };
         data.push(row);
       }
