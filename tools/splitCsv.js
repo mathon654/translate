@@ -44,7 +44,7 @@ csvFiles.forEach(CSV_FILE => {
       });
 
       for (let lang in row) {
-        if (!EXCLUDED_COLUMNS.includes(lang) && row[lang]) {
+        if (!EXCLUDED_COLUMNS.includes(lang)) {
           if (!translations[lang]) {
             translations[lang] = {};
           }
