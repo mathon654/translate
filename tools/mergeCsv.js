@@ -22,6 +22,7 @@ csvFiles.forEach(CSV_FILE => {
 
 for (let baseName in fileGroups) {
   let finalTranslations = {};
+  let preIdPresent = false;
 
   // Use a counter to determine when we've finished processing all files in the current group
   let filesProcessed = 0;
@@ -37,6 +38,12 @@ for (let baseName in fileGroups) {
           finalTranslations[id] = {};
         }
 
+        // Check if preId is present and non-empty
+
+        if (row['preId'] && row['preId'].trim() !== '') {
+          preIdPresent = true;
+        }
+
         // Copy all values from the row to the finalTranslations
         for (let column in row) {
           finalTranslations[id][column] = row[column];
@@ -47,16 +54,24 @@ for (let baseName in fileGroups) {
 
         // Once all files of the current group have been read, write to the merged CSV
         if (filesProcessed === fileGroups[baseName].length) {
-          const headers = ['version', 'comment', 'preId', 'id'];
+          const headers = ['version', 'comment', 'id'];
 
-          // Find all unique headers from the collected data
+          // Include preId only if it is present and non-empty
+          if (preIdPresent) {
+            headers.splice(2, 0, 'preId'); // Insert 'preId' at the correct position
+          }
+
           for (let id in finalTranslations) {
             for (let lang in finalTranslations[id]) {
+              if (lang === 'preId' && !preIdPresent) {
+                continue; // Skip preId if it is not present in any file
+              }
               if (!headers.includes(lang)) {
                 headers.push(lang);
               }
             }
           }
+
 
           const mergedCsvPath = path.join(OUTPUT_DIR, `${baseName}_merged.csv`);
 

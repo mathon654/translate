@@ -6,6 +6,7 @@
     "getChinese": "cd tools && node getChinese.js",
     "checkChinese": "cd tools && node checkChinese.js",
     "csvToYaml": "cd tools && node csvToYaml.js",
+    "csvToJson": "cd tools && node csvToJson.js",
     "tsToYaml": "cd tools && node tsToYaml.js",
     "yamlTocsv": "cd tools && node yamlTocsv.js",
     "jsonTocsv": "cd tools && node jsonTocsv.js",

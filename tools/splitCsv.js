@@ -56,7 +56,7 @@ csvFiles.forEach(CSV_FILE => {
       validRows++;
     }).on('end', () => {
     for (let lang in translations) {
-      if (EXCLUDED_COLUMNS.includes(lang)) continue;  // Skip non-language columns
+      if (EXCLUDED_COLUMNS.includes(lang.trim())) continue;  // Skip non-language columns
 
       const data = [];
       for (let pair in translations[lang]) {
