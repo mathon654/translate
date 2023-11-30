@@ -4,7 +4,7 @@ const csv = require('csv-parser');
 const prettier = require('prettier');
 const EXCLUDED_COLUMNS = ['id', 'version', 'comment'];
 // 常量定义
-const CSV_FILE = '../csvToJson/src/demo_tranlateions.csv';
+const CSV_FILE = '../csvToJson/src/translate.csv';
 const LOCAL_DIR = '../csvToJson/output';
 
 // 初始化变量

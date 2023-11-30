@@ -1,0 +1,81 @@
+version,comment,id,zh,hk,en,jp,th,spa,kor,fra
+1.0.0,描述,key,中文,繁体中文,英文,日文,泰语,西班牙,韩国,法国
+,首页,home1,我的账号,我的帳號,My Account,私のアカウント,บัญชีของฉัน,Mi cuenta,내 계정,Mon compte
+,首页,home2,交易,交易,Trade,貿易,ซื้อขาย,Comercio,거래,Commerce
+,首页,home3,AI量化,AI量化,AI Quantification,AI による定量化,การหาปริมาณ AI,Cuantificación de IA,AI 정량화,Quantification de l'IA
+,首页,home4,模拟交易,模擬交易,Simulated Trading,模擬取引,การซื้อขายจำลอง,Comercio simulado,모의거래,Trading simulé
+,首页,home5,分享,分享,Share,共有,แบ่งปัน,Compartir,공유하다,Partager
+,首页,home6,市场,市場,Market,市場,ตลาด,Mercado,시장,Marché
+,首页,home7,推荐,推薦,Recommend,推薦する,แนะนำ,Recomendar,추천하다,Recommander
+,首页,home8,收藏,收藏,Collect,集める,เก็บรวบรวม,Recolectar,모으다,Collecter
+,首页,home9,加密货币,加密貨幣,Cryptocurrency,暗号通貨,สกุลเงินดิจิทัล,Criptomoneda,암호화폐,Crypto-monnaie
+,首页,home10,外汇,外匯,Forex,外国為替,ฟอเร็กซ์,Forex,외환,Forex
+,首页,home11,期货,期貨,Futures,先物,ฟิวเจอร์ส,Futuros,선물,à terme
+,首页,home12,为什么选择我们,為什麼選擇我們,Why Us,なんで私達なの,ทำไมต้องเป็นเรา,Por qué elegirnos,왜 우리를 선택 했습니까,Pourquoi nous choisir
+,首页,home13,每秒30万笔交易 订单回应时间小于1毫秒,每秒30萬筆交易 訂單回應時間小於1毫秒,"300,000 transactions per second, order response time less than 1 millisecond","1 秒あたり 300,000 トランザクション、注文応答時間は 1 ミリ秒未満","ธุรกรรม 300,000 รายการต่อวินาที เวลาตอบสนองคำสั่งซื้อน้อยกว่า 1 มิลลิวินาที","300.000 transacciones por segundo, tiempo de respuesta de pedidos inferior a 1 milisegundo","초당 300,000건의 거래, 1밀리초 미만의 주문 응답 시간","300 000 transactions par seconde, temps de réponse aux commandes inférieur à 1 milliseconde"
+,首页,home14,进阶功能,進階功能,Advanced Functions,高度な機能,ฟังก์ชั่นขั้นสูง,Funciones avanzadas,고급 기능,Fonctions avancées
+,首页,home15,适用于机构交易者的 FIX API和适用于量化交易者的子账户,適用於機構交易者的 FIX API和適用於量化交易者的子帳戶,FIX API for institutional traders and sub-accounts for quantitative traders,機関投資家向けのFIX APIと定量的トレーダー向けのサブアカウント,FIX API สำหรับเทรดเดอร์สถาบันและบัญชีย่อยสำหรับเทรดเดอร์เชิงปริมาณ,API FIX para comerciantes institucionales y subcuentas para comerciantes cuantitativos,기관 트레이더를 위한 FIX API 및 퀀트 트레이더를 위한 하위 계정,API FIX pour les traders institutionnels et sous-comptes pour les traders quantitatifs
+,首页,home16,最強錢包安全,最強錢包安全,The strongest wallet security,最強のウォレットセキュリティ,การรักษาความปลอดภัยกระเป๋าเงินที่แข็งแกร่งที่สุด,La seguridad de billetera más sólida,가장 강력한 지갑 보안,La sécurité du portefeuille la plus forte
+,首页,home17,冷钱包储存。转账需要2级人类安全离线签名。,冷錢包儲存。轉帳需要2級人類安全離線簽名。,Cold wallet storage. Transfers require a Level 2 human secure offline signature.,コールドウォレットストレージ。転送には、レベル 2 の人間による安全なオフライン署名が必要です。,การจัดเก็บกระเป๋าเงินเย็น การโอนจำเป็นต้องมีลายเซ็นออฟไลน์ที่ปลอดภัยของมนุษย์ระดับ 2,Almacenamiento en billetera fría. Las transferencias requieren una firma humana segura fuera de línea de Nivel 2.,콜드 지갑 보관. 전송에는 레벨 2 인간 보안 오프라인 서명이 필요합니다.,Stockage de portefeuille froid. Les transferts nécessitent une signature hors ligne sécurisée humaine de niveau 2.
+,首页,home18,访问和支持,訪問和支持,Access & Support,アクセスとサポート,การเข้าถึงและการสนับสนุน,acceso y soporte,액세스 및 지원,accès et assistance
+,首页,home19,7天24小时及时多语言支援,7天24小時及時多語言支援,24/7 real-time multi-language support,24時間年中無休のリアルタイム多言語サポート,รองรับหลายภาษาแบบเรียลไทม์ตลอด 24 ชั่วโมงทุกวัน,"Soporte multilingüe en tiempo real las 24 horas, los 7 días de la semana",연중무휴 실시간 다국어 지원,Assistance multilingue en temps réel 24h/24 et 7j/7
+,钱包,assets1,钱包,錢包,Wallet,財布,กระเป๋าสตางค์,Billetera,지갑,Portefeuille
+,钱包,assets2,账户总资金,帳戶總資金,Total Account Funds,アカウント資金合計,เงินทุนในบัญชีทั้งหมด,Fondos totales de la cuenta,총 계좌 자금,Fonds totaux du compte
+,钱包,assets3,交易账户,交易帳戶,Transaction Account,取引口座,บัญชีธุรกรรม,Cuenta de transacciones,거래 계좌,Compte de transaction
+,钱包,assets4,资金账户,資金帳戶,Capital Account,資本勘定,บัญชีทุน,Cuenta capital,자본 계정,Compte de capital
+,钱包,assets5,今日收益,今日收益,Day Earnings,一日の収入,รายได้รายวัน,Las ganancias de hoy,오늘의 수입,Les gains d'aujourd'hui
+,钱包,assets6,我的地址,我的地址,My Address,私のアドレス,ที่อยู่ของฉัน,Mi dirección,내 주소,Mon adresse
+,钱包,assets7,资金划转,資金劃轉,Fund Transfer,口座振替え,การโอนเงิน,Transferencia de fondos,자금 이체,Transfert de fonds
+,钱包,assets8,电汇,電匯,Wire Transfer,電信送金,โอนเงิน,transferencia bancaria,전신환 송금,Virement bancaire
+,资产割转,move1,资产割转,資產割轉,Asset Transfer,資産譲渡,การโอนสินทรัพย์,Transferencia de activos,자산 양도,Transfert d'actifs
+,资产割转,move2,币种,幣種,Currency,通貨,สกุลเงิน,Divisa,통화,Devise
+,资产割转,move3,从,從,From,から,จาก,de,~에서,Depuis
+,资产割转,move4,可用金额,可用金額,Amount Available,使える金额,จำนวนเงินที่มีอยู่,Cantidad disponible,사용 가능한 금액,Montant disponible
+,资产割转,move5,至,至,To,に,ถึง,a,에게,à
+,资产割转,move6,地址,地址,Address,住所,ที่อยู่,DIRECCIÓN,주소,Adresse
+,资产割转,move7,割转数量,割轉數量,Transfer quantity,転送量,ปริมาณการโอน,Número de cortes,이체 수량,Nombre de coupes
+,资产割转,move8,割转,割轉,Transfer,移行,โอนย้าย,Cortar y girar,옮기다,Couper et tourner
+,资产割转,move9,全部,全部,All,全て,ทั้งหมด,todo,모두,Tous
+,资产割转,move10,为了资金安全，请不要向陌生地址发送加密资产,為了資金安全，請不要向陌生地址發送加密資產,"For the sake of fund security, please do not send crypto assets to unknown addresses",資金安全のため、不明なアドレスへの暗号資産の送付はご遠慮ください。,เพื่อความปลอดภัยของกองทุน โปรดอย่าส่งสินทรัพย์ crypto ไปยังที่อยู่ที่ไม่รู้จัก,"Por el bien de la seguridad de los fondos, no envíe activos criptográficos a direcciones desconocidas.",자금 보안을 위해 암호화폐 자산을 알 수 없는 주소로 보내지 마십시오.,"Pour des raisons de sécurité des fonds, veuillez ne pas envoyer d'actifs cryptographiques à des adresses inconnues."
+,交易,move11,交易,交易,Trade,貿易,ซื้อขาย,Comercio,거래,Commerce
+,交易,move12,买涨,買漲,Buy/Long,買い/ロング,ซื้อ/ซื้อ,Comprar/Largo,매수,Acheter/Long
+,交易,move13,买跌,買跌,Sell/Short,売り/空売り,ขาย/ชอร์ต,Vender corto,매도,Vendre
+,AI量化,AI1,AI量化,AI量化,AI Quantification,AI による定量化,การหาปริมาณ AI,Cuantificación de IA,AI 정량화,Quantification de l'IA
+,AI量化,AI2,总共套利,總共套利,Total Arbitrage,トータルアービトラージ,การเก็งกำไรรวม,Arbitraje total,총 차익거래,Arbitrage total
+,AI量化,AI3,今日挖矿,今日挖礦,Day Mining,デイマイニング,การขุดวัน,La minería hoy,오늘 채굴,L'exploitation minière aujourd'hui
+,AI量化,AI4,AI量化介紹,AI量化介紹,About The AI Quantification,AI 定量化について,เกี่ยวกับปริมาณ AI,Introducción a la cuantificación de la IA,AI정량개론,Introduction à la quantification de l'IA
+,AI量化,AI5,机器人是如何工作的,機器人是如何運作的,How robots work,ロボットの仕組み,หุ่นยนต์ทำงานอย่างไร,Como funcionan los robots,로봇이 작동하는 방식,Comment fonctionnent les robots
+,AI量化,AI6,查询订单,查詢訂單,Check Order,注文の確認,ตรวจสอบคำสั่งซื้อ,Orden de verificación,주문 확인,Vérifier la commande
+,AI量化,AI7,托管,託管,Hosting,ホスティング,โฮสติ้ง,Alojamiento,호스팅,Hébergement
+,AI量化,AI8,限额,限額,Limit,限界,ขีดจำกัด,Límite,한계,Limite
+,AI量化,AI9,周期,週期,Cycle,サイクル,วงจร,Ciclo,주기,Faire du vélo
+,AI量化,AI10,托管金额,託管金額,Hosting Amount,ホスティング金額,จำนวนเงินโฮสติ้ง,Monto del depósito en garantía,에스크로 금액,Montant du séquestre
+,AI量化,AI11,金额,金額,Amount,額,จำนวน,Cantidad,양,Montant
+,AI量化,AI12,立刻托管,立刻託管,Host Now,今すぐホストする,โฮสต์ตอนนี้,Anfitrión ahora,지금 호스트하세요,Héberger maintenant
+,AI量化,AI13,每日收益将发送到您的USDT钱包账户,每日收益將發送到您的USDT錢包帳戶,Daily earnings will be sent to your USDT wallet account,毎日の収益はUSDTウォレットアカウントに送金されます,รายได้รายวันจะถูกส่งไปยังบัญชีกระเป๋าเงิน USDT ของคุณ,Las ganancias diarias se enviarán a su cuenta de billetera USDT,일일 수익은 USDT 지갑 계정으로 전송됩니다.,Les gains quotidiens seront envoyés sur votre compte portefeuille USDT
+,AI量化,AI14,您的托管资金零风险,您的託管資金零風險,Your escrow funds are risk-free,エスクロー資金にはリスクがありません,เงินเอสโครว์ของคุณไม่มีความเสี่ยง,Sus fondos en custodia están libres de riesgos,귀하의 에스크로 자금은 위험이 없습니다,Vos fonds séquestres sont sans risque
+,AI量化,AI15,您可以在任何时间取回您的资金,您可以在任何時間取回您的資金,You can withdraw your funds at any time,いつでも資金を引き出すことができます,คุณสามารถถอนเงินของคุณได้ตลอดเวลา,Puedes retirar tus fondos en cualquier momento.,언제든지 자금을 인출할 수 있습니다.,Vous pouvez retirer vos fonds à tout moment
+,AI量化,AI16,AI机器人365*24小时不间断工作,AI機器人365*24小時不間斷地工作,AI robot works 24/7 365*,AIロボットは24時間365日稼働*,หุ่นยนต์ AI ทำงานทุกวันตลอด 24 ชั่วโมง 365*,"El robot con IA funciona 24 horas al día, 7 días a la semana, 365 días al año*",AI 로봇은 연중무휴 365일 작동합니다*,"Le robot IA fonctionne 24 heures sur 24, 7 jours sur 7, 365 jours par an*"
+,模拟交易,AI17,模拟交易,模擬交易,Simulated Trading,模擬取引,การซื้อขายจำลอง,comercio simulado,모의거래,Trading simulé
+,模拟交易,AI18,当前为模拟交易,目前為模擬交易,Currently simulated trading,現在シミュレーション取引中,การซื้อขายจำลองในปัจจุบัน,Comercio actualmente simulado,현재 시뮬레이션 거래,Trading actuellement simulé
+,分享,share1,获得加密货币奖励,獲得加密貨幣獎勵,Get cryptocurrency rewards,暗号通貨の報酬を獲得する,รับรางวัลสกุลเงินดิจิทัล,Obtenga recompensas en criptomonedas,암호화폐 보상 받기,Obtenez des récompenses en crypto-monnaie
+,分享,share2,邀请您的好友参与AI量化、租用矿机、产品交易，即可获得加密货币奖励,邀請您的好友參與AI量化、租用礦機、產品交易，即可獲得加密貨幣獎勵,"Invite your friends to participate in AI quantification, rent mining machines, and product transactions to receive cryptocurrency rewards.",友達を招待して AI 定量化に参加し、マイニング マシンをレンタルし、製品取引を行って仮想通貨の報酬を受け取りましょう。,เชิญเพื่อนของคุณให้เข้าร่วมการวัดปริมาณ AI เช่าเครื่องขุด และทำธุรกรรมผลิตภัณฑ์เพื่อรับรางวัลสกุลเงินดิจิทัล,"Invita a tus amigos a participar en la cuantificación de IA, alquilar máquinas de minería y transacciones de productos para recibir recompensas en criptomonedas.","AI 정량화, 채굴기 임대, 상품 거래에 친구를 초대해 암호화폐 보상을 받아보세요.","Invitez vos amis à participer à la quantification de l'IA, à louer des machines minières et aux transactions de produits pour recevoir des récompenses en crypto-monnaie."
+,分享,share3,分享链接,分享連結,Share Link,共有リンク,แบ่งปันลิงค์,Compartir enlace,링크 공유,Lien de partage
+,分享,share4,复制,複製,Copy,コピー,สำเนา,Copiar,복사,Copie
+,设置,setting1,立刻加入,立刻加入,Join now,今すぐ参加,เข้าร่วมเดี๋ยวนี้,Únete ahora,지금 가입하세요,Adhérer maintenant
+,设置,setting2,首页,首頁,Home,首页,บ้าน,página delantera,첫 장,Page de garde
+,设置,setting3,身份认证,身份認證,Verified,確認済み,ตรวจสอบแล้ว,Autenticación,입증,Authentification
+,设置,setting4,客服,客服,Customer Service,顧客サービス,บริการลูกค้า,Servicio al Cliente,고객 서비스,Service client
+,提示,tip1,请输入划转数量,請輸入劃轉數量,Please enter the transfer amount,送金額を入力してください,กรุณากรอกจำนวนเงินที่โอน,Por favor ingrese el monto de la transferencia,이체금액을 입력해주세요,Veuillez saisir le montant du transfert
+,提示,tip2,划转数量不能大于可用余额,劃轉數量不能大於可用餘額,The transfer amount cannot be greater than the available balance,送金金額は利用可能な残高を超えることはできません,จำนวนเงินโอนต้องไม่มากกว่ายอดคงเหลือที่มีอยู่,El monto de la transferencia no puede ser mayor que el saldo disponible,이체 금액은 사용 가능한 잔액보다 클 수 없습니다.,Le montant du transfert ne peut pas être supérieur au solde disponible
+,提示,tip3,提示,提示,Hint,ヒント,คำใบ้,Pista,힌트,Indice
+,提示,tip4,确定划转吗？,確定劃轉嗎？,Are you sure to transfer?,本当に転送しますか?,แน่ใจหรือว่าโอน?,¿Estás seguro de realizar la transferencia?,확실히 이전하시겠습니까?,Etes-vous sûr de transférer ?
+,提示,tip5,划转成功,劃轉成功,Transfer successful,転送成功,โอนสำเร็จ,Transferencia exitosa,전송 성공,Transfert réussi
+,提示,tip6,请输入托管数量,請輸入託管數量,Please enter the hosting quantity,ホスティング数量を入力してください,กรุณากรอกจำนวนโฮสติ้ง,Por favor ingrese la cantidad de hosting,호스팅 수량을 입력해주세요.,Veuillez entrer la quantité d'hébergement
+,提示,tip7,最低托管数量为,最低託管數量為,The minimum hosting quantity is,最小ホスティング量は次のとおりです,ปริมาณโฮสติ้งขั้นต่ำคือ,La cantidad mínima de hosting es,최소 호스팅 수량은,La quantité minimale d'hébergement est
+,提示,tip8,不能超过最大可用数量,不能超過最大可用數量,Cannot exceed the maximum available quantity,利用可能な最大数量を超えることはできません,ไม่สามารถเกินปริมาณสูงสุดที่มีอยู่,No se puede exceder la cantidad máxima disponible,최대 사용 가능 수량을 초과할 수 없습니다.,Ne peut pas dépasser la quantité maximale disponible
+,提示,tip9,授权失败,參與失敗,Failed to join,参加できませんでした,ไม่สามารถเข้าร่วมได้,No se pudo unir,참여 실패,La participation a échoué
+,提示,tip10,授权成功,參與成功,Joined successful,参加成功しました,เข้าร่วมสำเร็จแล้ว,Se unió exitosamente,성공적으로 참여,Participez avec succès
+,提示,tip11,高效能,高效能,high efficiency,高効率,ประสิทธิภาพสูง,alta eficiencia,고효율,haute efficacité
+,提示,tip12,合作伙伴,合作夥伴,Partner,相棒,พันธมิตร,Pareja,파트너,Partenaire
+,提示,tip13,每日收益,每日收益,daily income,日々の収入,รายได้รายวัน,ingreso diario,일일 수입,revenu quotidien
